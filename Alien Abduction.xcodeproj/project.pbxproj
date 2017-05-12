@@ -8,26 +8,48 @@
 
 /* Begin PBXBuildFile section */
 		B517A2EF1EC5509200EDF73A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A2EE1EC5509200EDF73A /* AppDelegate.swift */; };
-		B517A2F11EC5509200EDF73A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B517A2F01EC5509200EDF73A /* GameScene.sks */; };
-		B517A2F31EC5509200EDF73A /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = B517A2F21EC5509200EDF73A /* Actions.sks */; };
 		B517A2F51EC5509200EDF73A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A2F41EC5509200EDF73A /* GameScene.swift */; };
 		B517A2F71EC5509200EDF73A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A2F61EC5509200EDF73A /* GameViewController.swift */; };
 		B517A2FA1EC5509200EDF73A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B517A2F81EC5509200EDF73A /* Main.storyboard */; };
 		B517A2FC1EC5509200EDF73A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B517A2FB1EC5509200EDF73A /* Assets.xcassets */; };
 		B517A2FF1EC5509200EDF73A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B517A2FD1EC5509200EDF73A /* LaunchScreen.storyboard */; };
+		B517A30B1EC5535F00EDF73A /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A30A1EC5535F00EDF73A /* MenuScene.swift */; };
+		B517A30D1EC5539700EDF73A /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A30C1EC5539700EDF73A /* SettingsScene.swift */; };
+		B517A30F1EC5540200EDF73A /* SceneTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A30E1EC5540200EDF73A /* SceneTransition.swift */; };
+		B517A3111EC5540A00EDF73A /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3101EC5540A00EDF73A /* Scale.swift */; };
+		B517A3131EC5541400EDF73A /* Positions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3121EC5541400EDF73A /* Positions.swift */; };
+		B517A3151EC5541E00EDF73A /* DegToRads.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3141EC5541E00EDF73A /* DegToRads.swift */; };
+		B517A3171EC5543000EDF73A /* ZPositions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3161EC5543000EDF73A /* ZPositions.swift */; };
+		B517A3191EC5584E00EDF73A /* cityBG.png in Resources */ = {isa = PBXBuildFile; fileRef = B517A3181EC5584E00EDF73A /* cityBG.png */; };
+		B517A31E1EC5595C00EDF73A /* Abductee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A31D1EC5595C00EDF73A /* Abductee.swift */; };
+		B517A3201EC55A5000EDF73A /* alienShip.png in Resources */ = {isa = PBXBuildFile; fileRef = B517A31F1EC55A5000EDF73A /* alienShip.png */; };
+		B517A3221EC55B1900EDF73A /* PowerMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3211EC55B1900EDF73A /* PowerMeter.swift */; };
+		B517A3241EC55F2700EDF73A /* TractorBeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3231EC55F2700EDF73A /* TractorBeam.swift */; };
+		B517A3261EC5603200EDF73A /* man1.png in Resources */ = {isa = PBXBuildFile; fileRef = B517A3251EC5603200EDF73A /* man1.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B517A2EB1EC5509200EDF73A /* Alien Abduction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alien Abduction.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B517A2EE1EC5509200EDF73A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B517A2F01EC5509200EDF73A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		B517A2F21EC5509200EDF73A /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		B517A2F41EC5509200EDF73A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		B517A2F61EC5509200EDF73A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		B517A2F91EC5509200EDF73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B517A2FB1EC5509200EDF73A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B517A2FE1EC5509200EDF73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B517A3001EC5509200EDF73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B517A30A1EC5535F00EDF73A /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		B517A30C1EC5539700EDF73A /* SettingsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
+		B517A30E1EC5540200EDF73A /* SceneTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneTransition.swift; sourceTree = "<group>"; };
+		B517A3101EC5540A00EDF73A /* Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
+		B517A3121EC5541400EDF73A /* Positions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Positions.swift; sourceTree = "<group>"; };
+		B517A3141EC5541E00EDF73A /* DegToRads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegToRads.swift; sourceTree = "<group>"; };
+		B517A3161EC5543000EDF73A /* ZPositions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPositions.swift; sourceTree = "<group>"; };
+		B517A3181EC5584E00EDF73A /* cityBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cityBG.png; sourceTree = "<group>"; };
+		B517A31D1EC5595C00EDF73A /* Abductee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Abductee.swift; sourceTree = "<group>"; };
+		B517A31F1EC55A5000EDF73A /* alienShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alienShip.png; sourceTree = "<group>"; };
+		B517A3211EC55B1900EDF73A /* PowerMeter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerMeter.swift; sourceTree = "<group>"; };
+		B517A3231EC55F2700EDF73A /* TractorBeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TractorBeam.swift; sourceTree = "<group>"; };
+		B517A3251EC5603200EDF73A /* man1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man1.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,17 +82,84 @@
 		B517A2ED1EC5509200EDF73A /* Alien Abduction */ = {
 			isa = PBXGroup;
 			children = (
-				B517A2EE1EC5509200EDF73A /* AppDelegate.swift */,
-				B517A2F01EC5509200EDF73A /* GameScene.sks */,
-				B517A2F21EC5509200EDF73A /* Actions.sks */,
-				B517A2F41EC5509200EDF73A /* GameScene.swift */,
-				B517A2F61EC5509200EDF73A /* GameViewController.swift */,
-				B517A2F81EC5509200EDF73A /* Main.storyboard */,
+				B517A31C1EC5594A00EDF73A /* Classes */,
+				B517A3061EC5511300EDF73A /* Controllers */,
+				B517A3071EC5512600EDF73A /* Scenes */,
+				B517A3081EC5513400EDF73A /* Support Files */,
+				B517A3091EC5515100EDF73A /* Assets */,
 				B517A2FB1EC5509200EDF73A /* Assets.xcassets */,
-				B517A2FD1EC5509200EDF73A /* LaunchScreen.storyboard */,
-				B517A3001EC5509200EDF73A /* Info.plist */,
 			);
 			path = "Alien Abduction";
+			sourceTree = "<group>";
+		};
+		B517A3061EC5511300EDF73A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B517A2F61EC5509200EDF73A /* GameViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B517A3071EC5512600EDF73A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B517A2F41EC5509200EDF73A /* GameScene.swift */,
+				B517A30A1EC5535F00EDF73A /* MenuScene.swift */,
+				B517A30C1EC5539700EDF73A /* SettingsScene.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		B517A3081EC5513400EDF73A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B517A2EE1EC5509200EDF73A /* AppDelegate.swift */,
+				B517A3141EC5541E00EDF73A /* DegToRads.swift */,
+				B517A3121EC5541400EDF73A /* Positions.swift */,
+				B517A3101EC5540A00EDF73A /* Scale.swift */,
+				B517A30E1EC5540200EDF73A /* SceneTransition.swift */,
+				B517A3161EC5543000EDF73A /* ZPositions.swift */,
+				B517A2FD1EC5509200EDF73A /* LaunchScreen.storyboard */,
+				B517A2F81EC5509200EDF73A /* Main.storyboard */,
+				B517A3001EC5509200EDF73A /* Info.plist */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		B517A3091EC5515100EDF73A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B517A31A1EC5585300EDF73A /* Images */,
+				B517A31B1EC5585B00EDF73A /* Sounds */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		B517A31A1EC5585300EDF73A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B517A31F1EC55A5000EDF73A /* alienShip.png */,
+				B517A3181EC5584E00EDF73A /* cityBG.png */,
+				B517A3251EC5603200EDF73A /* man1.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		B517A31B1EC5585B00EDF73A /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		B517A31C1EC5594A00EDF73A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B517A31D1EC5595C00EDF73A /* Abductee.swift */,
+				B517A3211EC55B1900EDF73A /* PowerMeter.swift */,
+				B517A3231EC55F2700EDF73A /* TractorBeam.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,10 +223,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B517A2FA1EC5509200EDF73A /* Main.storyboard in Resources */,
-				B517A2F11EC5509200EDF73A /* GameScene.sks in Resources */,
+				B517A3201EC55A5000EDF73A /* alienShip.png in Resources */,
+				B517A3261EC5603200EDF73A /* man1.png in Resources */,
 				B517A2FC1EC5509200EDF73A /* Assets.xcassets in Resources */,
 				B517A2FF1EC5509200EDF73A /* LaunchScreen.storyboard in Resources */,
-				B517A2F31EC5509200EDF73A /* Actions.sks in Resources */,
+				B517A3191EC5584E00EDF73A /* cityBG.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,8 +239,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				B517A2F51EC5509200EDF73A /* GameScene.swift in Sources */,
+				B517A30F1EC5540200EDF73A /* SceneTransition.swift in Sources */,
+				B517A3151EC5541E00EDF73A /* DegToRads.swift in Sources */,
+				B517A3131EC5541400EDF73A /* Positions.swift in Sources */,
+				B517A30B1EC5535F00EDF73A /* MenuScene.swift in Sources */,
+				B517A3221EC55B1900EDF73A /* PowerMeter.swift in Sources */,
 				B517A2F71EC5509200EDF73A /* GameViewController.swift in Sources */,
+				B517A3111EC5540A00EDF73A /* Scale.swift in Sources */,
+				B517A31E1EC5595C00EDF73A /* Abductee.swift in Sources */,
+				B517A30D1EC5539700EDF73A /* SettingsScene.swift in Sources */,
 				B517A2EF1EC5509200EDF73A /* AppDelegate.swift in Sources */,
+				B517A3241EC55F2700EDF73A /* TractorBeam.swift in Sources */,
+				B517A3171EC5543000EDF73A /* ZPositions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
