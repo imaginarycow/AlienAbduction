@@ -11,5 +11,6 @@ import SpriteKit
 //collision bitmasks
 
 let abducteeCategory:UInt32 = 0x1 << 0
-let beamCategory:    UInt32 = 0x1 << 1
-let otherCategory:   UInt32 = 0x1 << 2
+let selectedAbducteeCategory:UInt32 = 0x1 << 1
+let beamCategory:    UInt32 = 0x1 << 2
+let otherCategory:   UInt32 = 0x1 << 3

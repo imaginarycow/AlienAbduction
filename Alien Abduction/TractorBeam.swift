@@ -35,16 +35,25 @@ class TractorBeam: SKShapeNode{
         path.closeSubpath()
     
         self.path = path
-        
-
         self.physicsBody = SKPhysicsBody(polygonFrom: (path))
         self.physicsBody?.usesPreciseCollisionDetection = true
         self.physicsBody?.affectedByGravity = false
         self.physicsBody?.isDynamic = false
         self.physicsBody?.categoryBitMask = beamCategory
-        self.physicsBody?.contactTestBitMask = abducteeCategory
+        self.physicsBody?.contactTestBitMask = selectedAbducteeCategory
         self.physicsBody?.collisionBitMask = otherCategory
-
+        
+        //draw center line in tractor beam
+        let centerPath = CGMutablePath()
+        let startPoint2 = CGPoint(x: shipPosition.x, y: shipPosition.y)
+        let endPoint2 = CGPoint(x: abPosition.x - char1Size.width/2, y: abPosition.y - char1Size.height/2)
+        
+        centerPath.move(to: startPoint2)
+        centerPath.addLine(to: endPoint2)
+        let centerLine = SKShapeNode(path: centerPath)
+        centerLine.strokeColor = .red
+        centerLine.lineWidth = 2
+        self.addChild(centerLine)
     }
     
     required init?(coder aDecoder: NSCoder) {

@@ -13,6 +13,7 @@ class Abductee: SKSpriteNode {
     var points:Int = 0
     var mass:Int = 0
     var direction: Direction!
+    var isSelected = false
     
     init(texture: SKTexture?, color: UIColor, size: CGSize, points: Int, mass:Int) {
         super.init(texture: texture, color: color, size: size)
@@ -32,7 +33,7 @@ class Abductee: SKSpriteNode {
         self.physicsBody?.usesPreciseCollisionDetection = true
         self.physicsBody?.affectedByGravity = false
         self.physicsBody?.categoryBitMask = abducteeCategory
-        self.physicsBody?.contactTestBitMask = beamCategory | abducteeCategory
+        self.physicsBody?.contactTestBitMask = beamCategory
         self.physicsBody?.collisionBitMask = otherCategory
 
         
@@ -46,6 +47,11 @@ class Abductee: SKSpriteNode {
         pb.fontSize = 14.0
         pb.fontColor = .red
         self.addChild(pb)
+    }
+    
+    func setUpright() {
+        //reset abductee after they have fallen
+        
     }
     
     func walk() {

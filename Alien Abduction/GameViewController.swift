@@ -25,6 +25,7 @@ class GameViewController: UIViewController {
         skView.showsPhysics = true
         deviceWidth = skView.bounds.size.width
         deviceHeight = skView.bounds.size.height
+        ratio = deviceWidth/deviceHeight
         thisView = skView
         
         setScale()

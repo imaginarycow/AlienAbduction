@@ -10,7 +10,7 @@ import SpriteKit
 
 func getRandomABPosition() -> CGPoint {
     
-    return CGPoint(x: getRandomFloat(min: 0.5, max: deviceWidth), y: deviceHeight * 0.15)
+    return CGPoint(x: getRandomFloat(min: 0.5, max: deviceWidth), y: characterStartingY)
 }
 
 func getRandomDirection() -> Direction {
