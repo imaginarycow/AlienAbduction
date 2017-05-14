@@ -26,6 +26,11 @@
 		B517A3221EC55B1900EDF73A /* PowerMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3211EC55B1900EDF73A /* PowerMeter.swift */; };
 		B517A3241EC55F2700EDF73A /* TractorBeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3231EC55F2700EDF73A /* TractorBeam.swift */; };
 		B517A3261EC5603200EDF73A /* man1.png in Resources */ = {isa = PBXBuildFile; fileRef = B517A3251EC5603200EDF73A /* man1.png */; };
+		B517A3281EC652FA00EDF73A /* RandomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3271EC652FA00EDF73A /* RandomFunctions.swift */; };
+		B517A32A1EC6545F00EDF73A /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3291EC6545F00EDF73A /* Directions.swift */; };
+		B517A32C1EC6553000EDF73A /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A32B1EC6553000EDF73A /* GameSettings.swift */; };
+		B517A32E1EC6621700EDF73A /* ContactBitMasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A32D1EC6621700EDF73A /* ContactBitMasks.swift */; };
+		B517A3301EC6629700EDF73A /* DelayFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A32F1EC6629700EDF73A /* DelayFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +55,11 @@
 		B517A3211EC55B1900EDF73A /* PowerMeter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerMeter.swift; sourceTree = "<group>"; };
 		B517A3231EC55F2700EDF73A /* TractorBeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TractorBeam.swift; sourceTree = "<group>"; };
 		B517A3251EC5603200EDF73A /* man1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man1.png; sourceTree = "<group>"; };
+		B517A3271EC652FA00EDF73A /* RandomFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomFunctions.swift; sourceTree = "<group>"; };
+		B517A3291EC6545F00EDF73A /* Directions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Directions.swift; sourceTree = "<group>"; };
+		B517A32B1EC6553000EDF73A /* GameSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
+		B517A32D1EC6621700EDF73A /* ContactBitMasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactBitMasks.swift; sourceTree = "<group>"; };
+		B517A32F1EC6629700EDF73A /* DelayFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,8 +124,13 @@
 			isa = PBXGroup;
 			children = (
 				B517A2EE1EC5509200EDF73A /* AppDelegate.swift */,
+				B517A32D1EC6621700EDF73A /* ContactBitMasks.swift */,
 				B517A3141EC5541E00EDF73A /* DegToRads.swift */,
+				B517A32F1EC6629700EDF73A /* DelayFunction.swift */,
+				B517A3291EC6545F00EDF73A /* Directions.swift */,
+				B517A32B1EC6553000EDF73A /* GameSettings.swift */,
 				B517A3121EC5541400EDF73A /* Positions.swift */,
+				B517A3271EC652FA00EDF73A /* RandomFunctions.swift */,
 				B517A3101EC5540A00EDF73A /* Scale.swift */,
 				B517A30E1EC5540200EDF73A /* SceneTransition.swift */,
 				B517A3161EC5543000EDF73A /* ZPositions.swift */,
@@ -239,11 +254,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B517A2F51EC5509200EDF73A /* GameScene.swift in Sources */,
+				B517A3301EC6629700EDF73A /* DelayFunction.swift in Sources */,
 				B517A30F1EC5540200EDF73A /* SceneTransition.swift in Sources */,
+				B517A3281EC652FA00EDF73A /* RandomFunctions.swift in Sources */,
 				B517A3151EC5541E00EDF73A /* DegToRads.swift in Sources */,
+				B517A32A1EC6545F00EDF73A /* Directions.swift in Sources */,
 				B517A3131EC5541400EDF73A /* Positions.swift in Sources */,
+				B517A32E1EC6621700EDF73A /* ContactBitMasks.swift in Sources */,
 				B517A30B1EC5535F00EDF73A /* MenuScene.swift in Sources */,
 				B517A3221EC55B1900EDF73A /* PowerMeter.swift in Sources */,
+				B517A32C1EC6553000EDF73A /* GameSettings.swift in Sources */,
 				B517A2F71EC5509200EDF73A /* GameViewController.swift in Sources */,
 				B517A3111EC5540A00EDF73A /* Scale.swift in Sources */,
 				B517A31E1EC5595C00EDF73A /* Abductee.swift in Sources */,
@@ -416,6 +436,7 @@
 				B517A3051EC5509200EDF73A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

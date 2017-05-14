@@ -10,6 +10,7 @@ import SpriteKit
 
 class TractorBeam: SKShapeNode{
     
+    
     init(shipPosition:CGPoint, abPosition:CGPoint) {
         super.init()
         
@@ -31,12 +32,10 @@ class TractorBeam: SKShapeNode{
         path.addLine(to: midPoint2)
         //path.addCurve(to: endPoint, control1: midPoint1, control2: midPoint2)
         path.addLine(to: endPoint)
-        
+        path.closeSubpath()
+    
         
         self.path = path
-        
-        self.physicsBody?.mass = 1.0
-        self.physicsBody = SKPhysicsBody(edgeChainFrom: path)
         
     }
     

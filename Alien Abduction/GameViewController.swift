@@ -22,6 +22,7 @@ class GameViewController: UIViewController {
         let skView = self.view as! SKView
         skView.showsFPS = true
         skView.showsNodeCount = true
+        skView.showsPhysics = true
         deviceWidth = skView.bounds.size.width
         deviceHeight = skView.bounds.size.height
         thisView = skView
@@ -37,7 +38,7 @@ class GameViewController: UIViewController {
         
         skView.presentScene(scene)
         
-        printFonts()
+        //printFonts()
         
     }
     
