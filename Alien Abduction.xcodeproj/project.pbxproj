@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B505786C1EC8008A00705844 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505786B1EC8008A00705844 /* Sizes.swift */; };
 		B517A2EF1EC5509200EDF73A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A2EE1EC5509200EDF73A /* AppDelegate.swift */; };
 		B517A2F51EC5509200EDF73A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A2F41EC5509200EDF73A /* GameScene.swift */; };
 		B517A2F71EC5509200EDF73A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A2F61EC5509200EDF73A /* GameViewController.swift */; };
@@ -29,11 +30,12 @@
 		B517A3281EC652FA00EDF73A /* RandomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3271EC652FA00EDF73A /* RandomFunctions.swift */; };
 		B517A32A1EC6545F00EDF73A /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3291EC6545F00EDF73A /* Directions.swift */; };
 		B517A32C1EC6553000EDF73A /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A32B1EC6553000EDF73A /* GameSettings.swift */; };
-		B517A32E1EC6621700EDF73A /* ContactBitMasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A32D1EC6621700EDF73A /* ContactBitMasks.swift */; };
+		B517A32E1EC6621700EDF73A /* CollisionBitMasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A32D1EC6621700EDF73A /* CollisionBitMasks.swift */; };
 		B517A3301EC6629700EDF73A /* DelayFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A32F1EC6629700EDF73A /* DelayFunction.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B505786B1EC8008A00705844 /* Sizes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
 		B517A2EB1EC5509200EDF73A /* Alien Abduction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alien Abduction.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B517A2EE1EC5509200EDF73A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B517A2F41EC5509200EDF73A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -58,7 +60,7 @@
 		B517A3271EC652FA00EDF73A /* RandomFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomFunctions.swift; sourceTree = "<group>"; };
 		B517A3291EC6545F00EDF73A /* Directions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Directions.swift; sourceTree = "<group>"; };
 		B517A32B1EC6553000EDF73A /* GameSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
-		B517A32D1EC6621700EDF73A /* ContactBitMasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactBitMasks.swift; sourceTree = "<group>"; };
+		B517A32D1EC6621700EDF73A /* CollisionBitMasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionBitMasks.swift; sourceTree = "<group>"; };
 		B517A32F1EC6629700EDF73A /* DelayFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayFunction.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				B517A2EE1EC5509200EDF73A /* AppDelegate.swift */,
-				B517A32D1EC6621700EDF73A /* ContactBitMasks.swift */,
+				B517A32D1EC6621700EDF73A /* CollisionBitMasks.swift */,
 				B517A3141EC5541E00EDF73A /* DegToRads.swift */,
 				B517A32F1EC6629700EDF73A /* DelayFunction.swift */,
 				B517A3291EC6545F00EDF73A /* Directions.swift */,
@@ -133,6 +135,7 @@
 				B517A3271EC652FA00EDF73A /* RandomFunctions.swift */,
 				B517A3101EC5540A00EDF73A /* Scale.swift */,
 				B517A30E1EC5540200EDF73A /* SceneTransition.swift */,
+				B505786B1EC8008A00705844 /* Sizes.swift */,
 				B517A3161EC5543000EDF73A /* ZPositions.swift */,
 				B517A2FD1EC5509200EDF73A /* LaunchScreen.storyboard */,
 				B517A2F81EC5509200EDF73A /* Main.storyboard */,
@@ -260,7 +263,8 @@
 				B517A3151EC5541E00EDF73A /* DegToRads.swift in Sources */,
 				B517A32A1EC6545F00EDF73A /* Directions.swift in Sources */,
 				B517A3131EC5541400EDF73A /* Positions.swift in Sources */,
-				B517A32E1EC6621700EDF73A /* ContactBitMasks.swift in Sources */,
+				B517A32E1EC6621700EDF73A /* CollisionBitMasks.swift in Sources */,
+				B505786C1EC8008A00705844 /* Sizes.swift in Sources */,
 				B517A30B1EC5535F00EDF73A /* MenuScene.swift in Sources */,
 				B517A3221EC55B1900EDF73A /* PowerMeter.swift in Sources */,
 				B517A32C1EC6553000EDF73A /* GameSettings.swift in Sources */,

@@ -12,3 +12,4 @@ import SpriteKit
 let bgZPosition:CGFloat = 1
 
 let abducteeZPosition:CGFloat = 5
+let beamZPosition:CGFloat = abducteeZPosition + 1

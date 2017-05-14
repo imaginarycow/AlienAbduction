@@ -12,6 +12,7 @@ import SpriteKit
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
+    let backButton = SKLabelNode(text: "Back")
     let bg = SKSpriteNode(imageNamed: "cityBG.png")
     let alienShip = SKSpriteNode(imageNamed: "alienShip.png")
     var isCloaked: Bool = false
@@ -22,25 +23,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var tractorBeam:TractorBeam?
     var currNumberOfAbductees = 0
     
-    let abducteeCategory:   UInt32 = UInt32(1)
-    let beamCategory:       UInt32 = UInt32(2)
-    let otherCategory: UInt32 = UInt32(3)
-    
+
     
     override func didMove(to view: SKView) {
         
         
         physicsWorld.gravity = CGVector(dx: 0.0, dy: -9.8)
-        physicsWorld.contactDelegate = self
+        self.physicsWorld.contactDelegate = self
         
         setBackground()
+        setButtons()
         setAlienShip()
         
         gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runGameTimer), userInfo: nil, repeats: true)
     }
+    
     override func willMove(from view: SKView) {
         gameTimer.invalidate()
     }
+    
     //game actions that run every second
     func runGameTimer() {
         
@@ -61,20 +62,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func setNewAbductee() {
         
-        let ab = Abductee(texture: SKTexture(imageNamed: "man1.png"), color: .white, size: CGSize(width: 40.0, height: 60.0), points: 1200, mass: 500)
+        let ab = Abductee(texture: SKTexture(imageNamed: "man1.png"), color: .white, size: char1Size, points: 1200, mass: 500)
         //let ab = SKSpriteNode(imageNamed: "man1.png")
-        ab.size = CGSize(width: 40.0, height: 60.0)
-        ab.zPosition = bg.zPosition + CGFloat(getRandomNumber(min: 0, max: 10))
         ab.position = getRandomABPosition()
-        
-        ab.physicsBody = SKPhysicsBody(circleOfRadius: 20.0)
-        ab.physicsBody?.usesPreciseCollisionDetection = true
-        ab.physicsBody?.affectedByGravity = false
-        ab.physicsBody?.categoryBitMask = abducteeCategory
-        ab.physicsBody?.contactTestBitMask = beamCategory | abducteeCategory
-        ab.physicsBody?.collisionBitMask = otherCategory
-
-
         addChild(ab)
         
         currNumberOfAbductees += 1
@@ -106,15 +96,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //get position of alien ship and position of selected abductee
         tractorBeam = TractorBeam(shipPosition: alienShip.position, abPosition: (selectedAbductee?.position)!)
         
-        tractorBeam?.physicsBody?.mass = 1.0
-        tractorBeam?.physicsBody = SKPhysicsBody(polygonFrom: (tractorBeam?.path)!)
-        tractorBeam?.physicsBody?.usesPreciseCollisionDetection = true
-        tractorBeam?.physicsBody?.affectedByGravity = false
-        tractorBeam?.physicsBody?.isDynamic = false
-        tractorBeam?.physicsBody?.categoryBitMask = beamCategory
-        tractorBeam?.physicsBody?.contactTestBitMask = abducteeCategory
-        tractorBeam?.physicsBody?.collisionBitMask = otherCategory
-        
+                
         //add tractor beam to view
         addChild(tractorBeam!)
         
@@ -146,6 +128,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(bg)
     }
     
+    func setButtons() {
+        
+    }
     
     //begin physics contact
     func didBegin(_ contact: SKPhysicsContact) {
@@ -172,24 +157,24 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     //physics contact ended
-//    func didEnd(_ contact: SKPhysicsContact) {
-//        var firstBody: SKPhysicsBody
-//        var secondBody: SKPhysicsBody
-//        // 2
-//        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
-//            firstBody = contact.bodyA
-//            secondBody = contact.bodyB
-//        } else {
-//            firstBody = contact.bodyB
-//            secondBody = contact.bodyA
-//        }
-//        
-//        if firstBody.categoryBitMask == beamCategory && secondBody.categoryBitMask == abducteeCategory {
-//            
-//            print("tractor beam stopped touching abductee")
-//            
-//        }
-//    }
+    func didEnd(_ contact: SKPhysicsContact) {
+        var firstBody: SKPhysicsBody
+        var secondBody: SKPhysicsBody
+        // 2
+        if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
+            firstBody = contact.bodyA
+            secondBody = contact.bodyB
+        } else {
+            firstBody = contact.bodyB
+            secondBody = contact.bodyA
+        }
+        
+        if firstBody.categoryBitMask == beamCategory && secondBody.categoryBitMask == abducteeCategory {
+            
+            print("tractor beam stopped touching abductee")
+            
+        }
+    }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         
@@ -201,6 +186,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let location = touch.location(in: self)
             
+            if backButton.contains(location) {
+                //go back to main menu
+                
+            }
+            
+            var abducteeTouched = false
             self.enumerateChildNodes(withName: "Abductee") {
                 node, stop in
                 
@@ -210,8 +201,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                     self.selectedAbductee = ab
                     self.setTractorBeam()
                     print("Abductee was selected")
-                    
+                    abducteeTouched = true
                 }
+                
+            }
+            
+            //check to see if user is tapping empty space to abduct target
+            if abducteeTouched == false && !backButton.contains(location){
+                print("player tapped screen")
+                
                 
             }
             

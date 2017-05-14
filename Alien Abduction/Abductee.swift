@@ -24,7 +24,17 @@ class Abductee: SKSpriteNode {
         self.mass = mass
         self.name = "Abductee"
         self.direction = getRandomDirection()
+        self.zPosition = abducteeZPosition
         addPointsBubble()
+        
+        //physics setup
+        self.physicsBody = SKPhysicsBody(texture: self.texture!, size: self.size)
+        self.physicsBody?.usesPreciseCollisionDetection = true
+        self.physicsBody?.affectedByGravity = false
+        self.physicsBody?.categoryBitMask = abducteeCategory
+        self.physicsBody?.contactTestBitMask = beamCategory | abducteeCategory
+        self.physicsBody?.collisionBitMask = otherCategory
+
         
     }
     
