@@ -14,3 +14,4 @@ let abducteeCategory:UInt32 = 0x1 << 0
 let selectedAbducteeCategory:UInt32 = 0x1 << 1
 let beamCategory:    UInt32 = 0x1 << 2
 let otherCategory:   UInt32 = 0x1 << 3
+let shipCategory:    UInt32 = 0x1 << 4

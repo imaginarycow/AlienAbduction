@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		B505786C1EC8008A00705844 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505786B1EC8008A00705844 /* Sizes.swift */; };
+		B514D1731EC8F23F00E0845F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514D1721EC8F23F00E0845F /* Colors.swift */; };
+		B514D1751EC8F4A600E0845F /* ABCompleteParticleEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = B514D1741EC8F4A600E0845F /* ABCompleteParticleEmitter.sks */; };
+		B514D1771EC8F57500E0845F /* ParticleEmitters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514D1761EC8F57500E0845F /* ParticleEmitters.swift */; };
+		B514D1791EC90FC400E0845F /* man2.png in Resources */ = {isa = PBXBuildFile; fileRef = B514D1781EC90FC400E0845F /* man2.png */; };
+		B514D17B1EC9101100E0845F /* man3.png in Resources */ = {isa = PBXBuildFile; fileRef = B514D17A1EC9101100E0845F /* man3.png */; };
+		B514D17D1EC9106000E0845F /* man4.png in Resources */ = {isa = PBXBuildFile; fileRef = B514D17C1EC9106000E0845F /* man4.png */; };
 		B517A2EF1EC5509200EDF73A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A2EE1EC5509200EDF73A /* AppDelegate.swift */; };
 		B517A2F51EC5509200EDF73A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A2F41EC5509200EDF73A /* GameScene.swift */; };
 		B517A2F71EC5509200EDF73A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A2F61EC5509200EDF73A /* GameViewController.swift */; };
@@ -36,6 +42,12 @@
 
 /* Begin PBXFileReference section */
 		B505786B1EC8008A00705844 /* Sizes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
+		B514D1721EC8F23F00E0845F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B514D1741EC8F4A600E0845F /* ABCompleteParticleEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ABCompleteParticleEmitter.sks; sourceTree = "<group>"; };
+		B514D1761EC8F57500E0845F /* ParticleEmitters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticleEmitters.swift; sourceTree = "<group>"; };
+		B514D1781EC90FC400E0845F /* man2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man2.png; sourceTree = "<group>"; };
+		B514D17A1EC9101100E0845F /* man3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man3.png; sourceTree = "<group>"; };
+		B514D17C1EC9106000E0845F /* man4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man4.png; sourceTree = "<group>"; };
 		B517A2EB1EC5509200EDF73A /* Alien Abduction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alien Abduction.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B517A2EE1EC5509200EDF73A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B517A2F41EC5509200EDF73A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -126,11 +138,14 @@
 			isa = PBXGroup;
 			children = (
 				B517A2EE1EC5509200EDF73A /* AppDelegate.swift */,
+				B514D1741EC8F4A600E0845F /* ABCompleteParticleEmitter.sks */,
 				B517A32D1EC6621700EDF73A /* CollisionBitMasks.swift */,
+				B514D1721EC8F23F00E0845F /* Colors.swift */,
 				B517A3141EC5541E00EDF73A /* DegToRads.swift */,
 				B517A32F1EC6629700EDF73A /* DelayFunction.swift */,
 				B517A3291EC6545F00EDF73A /* Directions.swift */,
 				B517A32B1EC6553000EDF73A /* GameSettings.swift */,
+				B514D1761EC8F57500E0845F /* ParticleEmitters.swift */,
 				B517A3121EC5541400EDF73A /* Positions.swift */,
 				B517A3271EC652FA00EDF73A /* RandomFunctions.swift */,
 				B517A3101EC5540A00EDF73A /* Scale.swift */,
@@ -159,6 +174,9 @@
 				B517A31F1EC55A5000EDF73A /* alienShip.png */,
 				B517A3181EC5584E00EDF73A /* cityBG.png */,
 				B517A3251EC5603200EDF73A /* man1.png */,
+				B514D1781EC90FC400E0845F /* man2.png */,
+				B514D17A1EC9101100E0845F /* man3.png */,
+				B514D17C1EC9106000E0845F /* man4.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -217,7 +235,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B517A2E61EC5509200EDF73A /* Build configuration list for PBXProject "Alien Abduction" */;
+			buildConfigurationList = B517A2E61EC5509200EDF73A /* Build configuration list for PBXProject "Retro Aliens" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -241,11 +259,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B517A2FA1EC5509200EDF73A /* Main.storyboard in Resources */,
+				B514D17D1EC9106000E0845F /* man4.png in Resources */,
+				B514D1791EC90FC400E0845F /* man2.png in Resources */,
+				B514D17B1EC9101100E0845F /* man3.png in Resources */,
 				B517A3201EC55A5000EDF73A /* alienShip.png in Resources */,
 				B517A3261EC5603200EDF73A /* man1.png in Resources */,
 				B517A2FC1EC5509200EDF73A /* Assets.xcassets in Resources */,
 				B517A2FF1EC5509200EDF73A /* LaunchScreen.storyboard in Resources */,
 				B517A3191EC5584E00EDF73A /* cityBG.png in Resources */,
+				B514D1751EC8F4A600E0845F /* ABCompleteParticleEmitter.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,10 +279,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B517A2F51EC5509200EDF73A /* GameScene.swift in Sources */,
+				B514D1731EC8F23F00E0845F /* Colors.swift in Sources */,
 				B517A3301EC6629700EDF73A /* DelayFunction.swift in Sources */,
 				B517A30F1EC5540200EDF73A /* SceneTransition.swift in Sources */,
 				B517A3281EC652FA00EDF73A /* RandomFunctions.swift in Sources */,
 				B517A3151EC5541E00EDF73A /* DegToRads.swift in Sources */,
+				B514D1771EC8F57500E0845F /* ParticleEmitters.swift in Sources */,
 				B517A32A1EC6545F00EDF73A /* Directions.swift in Sources */,
 				B517A3131EC5541400EDF73A /* Positions.swift in Sources */,
 				B517A32E1EC6621700EDF73A /* CollisionBitMasks.swift in Sources */,
@@ -424,7 +448,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B517A2E61EC5509200EDF73A /* Build configuration list for PBXProject "Alien Abduction" */ = {
+		B517A2E61EC5509200EDF73A /* Build configuration list for PBXProject "Retro Aliens" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B517A3011EC5509200EDF73A /* Debug */,

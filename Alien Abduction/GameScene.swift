@@ -20,14 +20,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var gameTimer:Timer!
     var selectedAbductee:Abductee?
     var abductees:[Abductee] = []
+    var possibleAbductees:[Abductee] = []
     var tractorBeam:TractorBeam?
+    var lastTap:Date = Date()
     var currNumberOfAbductees = 0
+    var riseRateX:CGFloat!
+    var riseRateY:CGFloat!
     
     //level booleans
     var isCloaked: Bool = false
     var tractorBeamInUse:Bool = false
     var abducteeWasSelected:Bool = false
     var abducteeIsInBeam:Bool = false
+    var abductionCompleted:Bool = false
 
     
     override func didMove(to view: SKView) {
@@ -53,8 +58,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //game actions that run every second
     func runGameTimer() {
         
-        cloakAlienShip()
-        
         if currNumberOfAbductees < maxABInView {
             setNewAbductee()
         }
@@ -64,21 +67,51 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let ab = node as! Abductee
             if !ab.isSelected{
-                ab.walk()
+                if self.tractorBeamInUse {
+                    ab.run()
+                }else {
+                    ab.walk()
+                }
             }
             
         }
 
     }
     
-    func setNewAbductee() {
+    func checkSecondsBetweenTaps() {
+        print("checking seconds between taps")
+
+        let elapsed = Date().timeIntervalSince(lastTap)
+        print("elapsed time since tap: \(elapsed)")
         
-        let ab = Abductee(texture: SKTexture(imageNamed: "man1.png"), color: .white, size: char1Size, points: 1200, mass: 500)
-        //let ab = SKSpriteNode(imageNamed: "man1.png")
+        if elapsed > 2 {
+
+            removeTractorBeam()
+            releaseAbductee()
+        }
+        
+    }
+    
+    func countAbducteesInView() {
+        
+        var count = 0
+        
+        self.enumerateChildNodes(withName: "Abductee") {
+            node, stop in
+            
+            count += 1
+        }
+        currNumberOfAbductees = count
+    }
+    
+    func setNewAbductee() {
+    
+        let randAB = getRandomAbductee()
+        let ab = Abductee(texture: SKTexture(imageNamed: randAB[0] as! String), color: randAB[1] as! UIColor, size: randAB[2] as! CGSize, points: randAB[3] as! Int, mass: randAB[4] as! Int)
+
         ab.position = getRandomABPosition()
         addChild(ab)
-        
-        currNumberOfAbductees += 1
+
     }
     
     func removeOffScreenObjects() {
@@ -90,7 +123,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if node.position.x < 0.0 || node.position.x > deviceWidth {
                 node.removeAllActions()
                 node.removeFromParent()
-                self.currNumberOfAbductees -= 1
 
             }
         }
@@ -99,30 +131,29 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func attemptAbduction() {
         
-        let oldPosition = selectedAbductee?.position
-        let oldPositionX = selectedAbductee?.position.x
-        let oldPositionY = selectedAbductee?.position.y
-        var newX:CGFloat!
-        let newY:CGFloat = oldPositionY! + abductionRateY
+        let abCurrPosition = selectedAbductee?.position
         
-//        if oldPositionY == (tractorBeam?.position.y)! {
-//            
-//        }
-//        
-//        if oldPositionX != (tractorBeam?.position.x)! {
-//            
-//        }
         
-        if (tractorBeam?.contains(oldPosition!))! {
-            newX = (tractorBeam?.position.x)!
+        var newX = abCurrPosition?.x
+        let newY = (selectedAbductee?.position.y)! + riseRateY
+        
+        if newX! > alienShip.position.x {
+            newX = (selectedAbductee?.position.x)! - riseRateX
+        }
+        if newX! < alienShip.position.x {
+            newX = (selectedAbductee?.position.x)! + riseRateX
+        }
+        
+        
+        if (tractorBeam?.contains(abCurrPosition!))! || abducteeIsInBeam {
+            
             //move selectedAbductee towards the ship with every tap
-            selectedAbductee?.position = CGPoint(x: newX, y: newY)
+            selectedAbductee?.position = CGPoint(x: newX!, y: newY)
         }
         else{
             removeTractorBeam()
         }
         
-        //if abductee is within short distance of alien ship, call completeAbduction()
         
     }
     
@@ -142,16 +173,49 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
         }
         selectedAbductee = nil
+        abductionCompleted = false
 
     }
     
     func completeAbduction() {
         
+        abductionCompleted = false
+        print("Abduction completed: \(abductionCompleted)")
+        print("CompleteAbduction called")
+        
         selectedAbductee = nil
+        selectedAbductee?.removeFromParent()
+        
+        self.enumerateChildNodes(withName: "Abductee") {
+            node, stop in
+            
+            let ab = node as! Abductee
+            if ab.isSelected{
+                ab.removeAllActions()
+                ab.removeFromParent()
+            }
+            
+        }
+        
         removeTractorBeam()
+        
+        let spark = createParticle(target: alienShip)
+        spark.numParticlesToEmit = 300
+        alienShip.addChild(spark)
+        
+        delay(4.0) {
+            spark.removeFromParent()
+            spark.targetNode = nil
+            spark.resetSimulation()
+            
+        }
+        //reset tap time stamp array
+        releaseAbductee()
     }
     
     func setTractorBeam(abPosition: CGPoint) {
+        abductionCompleted = false
+        
         //only create new tractor beam if one does not already exist
         tractorBeamInUse = true
         if tractorBeam != nil {
@@ -165,12 +229,31 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         //add tractor beam to view
         addChild(tractorBeam!)
         
+        //set rise and run for abduction
+        let abCurrPosition = selectedAbductee?.position
+        let abCurrX = abCurrPosition?.x
+        let abCurrY = abCurrPosition?.y
+        
+        let heightToGo:CGFloat = alienShip.position.y - abCurrY!
+        var widthToGo:CGFloat = 0
+        
+        if abCurrX! > alienShip.position.x {
+            widthToGo = abCurrX! - alienShip.position.x
+        }
+        if abCurrX! < alienShip.position.x {
+            widthToGo = alienShip.position.x - abCurrX!
+        }
+
+        riseRateX = widthToGo/(minNumberOfTaps * CGFloat((selectedAbductee?.mass)!))
+        riseRateY = heightToGo/(minNumberOfTaps * CGFloat((selectedAbductee?.mass)!))
+        
     }
     
     func removeTractorBeam() {
         tractorBeam?.removeFromParent()
         tractorBeam = nil
         tractorBeamInUse = false
+        abductionCompleted = false
     }
     
     func cloakAlienShip() {
@@ -186,9 +269,33 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    func swerveAlienShip() {
+        
+        let randomNumber = getRandomNumber(max: 10)
+        
+        if randomNumber % 2 == 0 {
+            alienShip.run(SKAction.moveBy(x: 80.0, y: -80.0, duration: 0.3))
+            delay(1.0, completion: {
+                self.alienShip.run(SKAction.move(to: shipPosition, duration: 0.3))
+            })
+        }else {
+            
+            alienShip.run(SKAction.moveBy(x: -80.0, y: -80.0, duration: 0.3))
+            delay(1.0, completion: {
+                self.alienShip.run(SKAction.move(to: shipPosition, duration: 0.3))
+            })
+
+        }
+    }
+    
     func setAlienShip() {
-        alienShip.zPosition = bg.zPosition + 1
-        alienShip.position = CGPoint(x: centerX, y: deviceHeight * 0.85)
+        alienShip.zPosition = shipZPosition
+        alienShip.position = shipPosition
+        alienShip.physicsBody = SKPhysicsBody(texture: alienShip.texture!, size: alienShip.size)
+        alienShip.physicsBody?.affectedByGravity = false
+        alienShip.physicsBody?.isDynamic = false
+        alienShip.physicsBody?.categoryBitMask = shipCategory
+        alienShip.physicsBody?.contactTestBitMask = abducteeCategory
         addChild(alienShip)
     }
     
@@ -223,8 +330,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             print("tractor beam touching abductee")
             abducteeIsInBeam = true
         }
-        if firstBody.categoryBitMask == abducteeCategory && secondBody.categoryBitMask == abducteeCategory{
-            //print("abductee touching abductee")
+        if firstBody.categoryBitMask == abducteeCategory && secondBody.categoryBitMask == shipCategory{
+            print("abductee touching alien ship")
+            print("Abduction completed: \(abductionCompleted)")
+            if !abductionCompleted {
+                completeAbduction()
+                abductionCompleted = true
+                print("Abduction completed: \(abductionCompleted)")
+            }
         }
     }
     
@@ -241,11 +354,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             secondBody = contact.bodyA
         }
         
-        if firstBody.categoryBitMask == selectedAbducteeCategory && secondBody.categoryBitMask == beamCategory {
+        if firstBody.categoryBitMask == abducteeCategory && secondBody.categoryBitMask == shipCategory {
             
-            print("tractor beam stopped touching abductee")
+            print("abductee stopped touching ship")
             abducteeIsInBeam = false
-            releaseAbductee()
+            //releaseAbductee()
         }
     }
     
@@ -264,6 +377,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
             }
             
+            if alienShip.contains(location) {
+                //Play alien voice & swerve ship
+                swerveAlienShip()
+            }
+            
             var abducteeTouched = false
             self.enumerateChildNodes(withName: "Abductee") {
                 node, stop in
@@ -272,11 +390,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 if ab.contains(location) {
                     //set tractor beam
                     self.selectedAbductee = ab
+//                    self.selectedAbductee?.physicsBody?.categoryBitMask = selectedAbducteeCategory
+//                    self.selectedAbductee?.physicsBody?.contactTestBitMask = beamCategory
                     ab.isSelected = true
                     self.abducteeWasSelected = true
                     self.setTractorBeam(abPosition: ab.position)
                     print("Abductee was selected")
                     abducteeTouched = true
+                    self.lastTap = Date()
                 }
                 
             }
@@ -287,6 +408,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 
                 if tractorBeamInUse && abducteeWasSelected {
                     attemptAbduction()
+                    lastTap = Date()
+
                 }
                 
             }
@@ -297,6 +420,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        if tractorBeamInUse {
+            checkSecondsBetweenTaps()
+        }
+        
+        
+        //check how many abductees in view at all times
+        countAbducteesInView()
 
         //continuously check to if selectedAbductee is in the tractor beam
         if tractorBeamInUse && (tractorBeam?.contains((selectedAbductee?.position)!))!{
@@ -306,8 +436,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
         }else {
             abducteeIsInBeam = false
-            removeTractorBeam()
-            releaseAbductee()
+            //removeTractorBeam()
+            //releaseAbductee()
         }
         
         removeOffScreenObjects()

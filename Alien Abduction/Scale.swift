@@ -6,9 +6,9 @@
 //  Copyright © 2017 Ramiro Beltran. All rights reserved.
 //
 
-import Foundation
+import SpriteKit
 
-var scale = 1.0
+var scale:CGFloat = 1.0
 
 func setScale() {
     //update scale based on device size

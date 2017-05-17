@@ -10,6 +10,8 @@ import SpriteKit
 
 class TractorBeam: SKShapeNode{
     
+    var centerLine:SKShapeNode!
+    
     
     init(shipPosition:CGPoint, abPosition:CGPoint) {
         super.init()
@@ -22,10 +24,10 @@ class TractorBeam: SKShapeNode{
         self.name = name
         
         let path = CGMutablePath()
-        let startPoint = CGPoint(x: shipPosition.x, y: shipPosition.y)
+        let startPoint = CGPoint(x: shipPosition.x - char1Size.width/2, y: shipPosition.y)
         let midPoint1 = CGPoint(x: abPosition.x - char1Size.width, y: abPosition.y - char1Size.height/2)
         let midPoint2 = CGPoint(x: abPosition.x + char1Size.width, y: abPosition.y - char1Size.height/2)
-        let endPoint = CGPoint(x: shipPosition.x, y: shipPosition.y)
+        let endPoint = CGPoint(x: shipPosition.x + char1Size.width/2, y: shipPosition.y)
         
         path.move(to: startPoint)
         path.addLine(to: midPoint1)
@@ -43,17 +45,6 @@ class TractorBeam: SKShapeNode{
         self.physicsBody?.contactTestBitMask = selectedAbducteeCategory
         self.physicsBody?.collisionBitMask = otherCategory
         
-        //draw center line in tractor beam
-        let centerPath = CGMutablePath()
-        let startPoint2 = CGPoint(x: shipPosition.x, y: shipPosition.y)
-        let endPoint2 = CGPoint(x: abPosition.x - char1Size.width/2, y: abPosition.y - char1Size.height/2)
-        
-        centerPath.move(to: startPoint2)
-        centerPath.addLine(to: endPoint2)
-        let centerLine = SKShapeNode(path: centerPath)
-        centerLine.strokeColor = .red
-        centerLine.lineWidth = 2
-        self.addChild(centerLine)
     }
     
     required init?(coder aDecoder: NSCoder) {

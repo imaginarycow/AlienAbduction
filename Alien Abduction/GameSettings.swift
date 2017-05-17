@@ -9,8 +9,8 @@
 import SpriteKit
 
 let charWalkSpeed:CGFloat = 10
-let charRunSpeed:CGFloat = 10
-let abductionRateY:CGFloat = 5
+let charRunSpeed:CGFloat = 20
+let minNumberOfTaps:CGFloat = 10.5
 
 //maximum number of abductees in view at any given time
 let maxABInView:Int = 6

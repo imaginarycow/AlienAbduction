@@ -8,6 +8,11 @@
 
 import SpriteKit
 
+func getRandomAbductee() -> [Any] {
+    
+    return possibleAbductees[getRandomNumber(max: possibleAbductees.count - 1)]
+}
+
 func getRandomABPosition() -> CGPoint {
     
     return CGPoint(x: getRandomFloat(min: 0.5, max: deviceWidth), y: characterStartingY)
@@ -28,7 +33,7 @@ func getRandomFloat(min:CGFloat, max:CGFloat) ->CGFloat {
     
 }
 
-func getRandomNumber(min:Int, max:Int) ->Int {
+func getRandomNumber(max:Int) ->Int {
     
     return Int(arc4random_uniform(UInt32(max)))
 

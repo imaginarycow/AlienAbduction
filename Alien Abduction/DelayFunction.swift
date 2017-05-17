@@ -6,6 +6,10 @@
 //  Copyright © 2017 Ramiro Beltran. All rights reserved.
 //
 
-import Foundation
+import SpriteKit
 
-
+func delay(_ seconds: Double, completion: @escaping () -> ()) {
+    DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+        completion()
+    }
+}

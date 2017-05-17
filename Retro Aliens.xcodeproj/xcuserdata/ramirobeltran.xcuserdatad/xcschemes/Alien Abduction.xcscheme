@@ -17,7 +17,7 @@
                BlueprintIdentifier = "B517A2EA1EC5509200EDF73A"
                BuildableName = "Alien Abduction.app"
                BlueprintName = "Alien Abduction"
-               ReferencedContainer = "container:Alien Abduction.xcodeproj">
+               ReferencedContainer = "container:Retro Aliens.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
             BlueprintIdentifier = "B517A2EA1EC5509200EDF73A"
             BuildableName = "Alien Abduction.app"
             BlueprintName = "Alien Abduction"
-            ReferencedContainer = "container:Alien Abduction.xcodeproj">
+            ReferencedContainer = "container:Retro Aliens.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -58,7 +58,7 @@
             BlueprintIdentifier = "B517A2EA1EC5509200EDF73A"
             BuildableName = "Alien Abduction.app"
             BlueprintName = "Alien Abduction"
-            ReferencedContainer = "container:Alien Abduction.xcodeproj">
+            ReferencedContainer = "container:Retro Aliens.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -77,7 +77,7 @@
             BlueprintIdentifier = "B517A2EA1EC5509200EDF73A"
             BuildableName = "Alien Abduction.app"
             BlueprintName = "Alien Abduction"
-            ReferencedContainer = "container:Alien Abduction.xcodeproj">
+            ReferencedContainer = "container:Retro Aliens.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

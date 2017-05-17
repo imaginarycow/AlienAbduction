@@ -13,3 +13,5 @@ let bgZPosition:CGFloat = 1
 
 let abducteeZPosition:CGFloat = 5
 let beamZPosition:CGFloat = abducteeZPosition + 1
+let shipZPosition:CGFloat = beamZPosition + 1
+let particleZPosition:CGFloat = shipZPosition + 1
