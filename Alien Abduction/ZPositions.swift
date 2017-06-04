@@ -11,7 +11,10 @@ import SpriteKit
 //zPositions for all objects in view
 let bgZPosition:CGFloat = 1
 
+let alienZPosition:CGFloat = 3
 let abducteeZPosition:CGFloat = 5
+let buttonZPosition:CGFloat = bgZPosition + 1
+let itemZPosition:CGFloat = 4
 let beamZPosition:CGFloat = abducteeZPosition + 1
 let shipZPosition:CGFloat = beamZPosition + 1
 let particleZPosition:CGFloat = shipZPosition + 1

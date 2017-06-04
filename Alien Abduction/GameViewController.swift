@@ -17,12 +17,12 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        scene = GameScene()
+        scene = MenuScene()
         // Configure the view.
         let skView = self.view as! SKView
         skView.showsFPS = true
         skView.showsNodeCount = true
-        skView.showsPhysics = true
+        //skView.showsPhysics = true
         deviceWidth = skView.bounds.size.width
         deviceHeight = skView.bounds.size.height
         ratio = deviceWidth/deviceHeight
@@ -39,7 +39,7 @@ class GameViewController: UIViewController {
         
         skView.presentScene(scene)
         
-        //printFonts()
+        printFonts()
         
     }
     

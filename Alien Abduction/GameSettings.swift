@@ -8,6 +8,12 @@
 
 import SpriteKit
 
+//let globalFont = "AmericanTypewriter-Bold"
+//let globalFont = "VanchromeClear-Regular"
+
+let globalFont = "XylitolHollow-Regular"
+//let globalFont = "KraitSolid-Regular"
+
 let charWalkSpeed:CGFloat = 10
 let charRunSpeed:CGFloat = 20
 let minNumberOfTaps:CGFloat = 10.5

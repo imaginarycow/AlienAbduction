@@ -1,0 +1,736 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B505786C1EC8008A00705844 /* Sizes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505786B1EC8008A00705844 /* Sizes.swift */; };
+		B50E69D01ECBD5EE0068ABE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B517A2FB1EC5509200EDF73A /* Assets.xcassets */; };
+		B50E69D21ECBD9920068ABE7 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50E69D11ECBD9920068ABE7 /* SoundPlayer.swift */; };
+		B514D1731EC8F23F00E0845F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514D1721EC8F23F00E0845F /* Colors.swift */; };
+		B514D1751EC8F4A600E0845F /* ABCompleteParticleEmitter.sks in Resources */ = {isa = PBXBuildFile; fileRef = B514D1741EC8F4A600E0845F /* ABCompleteParticleEmitter.sks */; };
+		B514D1771EC8F57500E0845F /* ParticleEmitters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B514D1761EC8F57500E0845F /* ParticleEmitters.swift */; };
+		B514D1791EC90FC400E0845F /* man2.png in Resources */ = {isa = PBXBuildFile; fileRef = B514D1781EC90FC400E0845F /* man2.png */; };
+		B514D17B1EC9101100E0845F /* man3.png in Resources */ = {isa = PBXBuildFile; fileRef = B514D17A1EC9101100E0845F /* man3.png */; };
+		B514D17D1EC9106000E0845F /* man4.png in Resources */ = {isa = PBXBuildFile; fileRef = B514D17C1EC9106000E0845F /* man4.png */; };
+		B517A2EF1EC5509200EDF73A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A2EE1EC5509200EDF73A /* AppDelegate.swift */; };
+		B517A2F51EC5509200EDF73A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A2F41EC5509200EDF73A /* GameScene.swift */; };
+		B517A2F71EC5509200EDF73A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A2F61EC5509200EDF73A /* GameViewController.swift */; };
+		B517A2FA1EC5509200EDF73A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B517A2F81EC5509200EDF73A /* Main.storyboard */; };
+		B517A2FF1EC5509200EDF73A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B517A2FD1EC5509200EDF73A /* LaunchScreen.storyboard */; };
+		B517A30B1EC5535F00EDF73A /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A30A1EC5535F00EDF73A /* MenuScene.swift */; };
+		B517A30D1EC5539700EDF73A /* SettingsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A30C1EC5539700EDF73A /* SettingsScene.swift */; };
+		B517A30F1EC5540200EDF73A /* SceneTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A30E1EC5540200EDF73A /* SceneTransition.swift */; };
+		B517A3111EC5540A00EDF73A /* Scale.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3101EC5540A00EDF73A /* Scale.swift */; };
+		B517A3131EC5541400EDF73A /* Positions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3121EC5541400EDF73A /* Positions.swift */; };
+		B517A3151EC5541E00EDF73A /* DegToRads.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3141EC5541E00EDF73A /* DegToRads.swift */; };
+		B517A3171EC5543000EDF73A /* ZPositions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3161EC5543000EDF73A /* ZPositions.swift */; };
+		B517A31E1EC5595C00EDF73A /* Abductee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A31D1EC5595C00EDF73A /* Abductee.swift */; };
+		B517A3201EC55A5000EDF73A /* alienShip.png in Resources */ = {isa = PBXBuildFile; fileRef = B517A31F1EC55A5000EDF73A /* alienShip.png */; };
+		B517A3221EC55B1900EDF73A /* PowerMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3211EC55B1900EDF73A /* PowerMeter.swift */; };
+		B517A3241EC55F2700EDF73A /* TractorBeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3231EC55F2700EDF73A /* TractorBeam.swift */; };
+		B517A3261EC5603200EDF73A /* man1.png in Resources */ = {isa = PBXBuildFile; fileRef = B517A3251EC5603200EDF73A /* man1.png */; };
+		B517A3281EC652FA00EDF73A /* RandomFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3271EC652FA00EDF73A /* RandomFunctions.swift */; };
+		B517A32A1EC6545F00EDF73A /* Directions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A3291EC6545F00EDF73A /* Directions.swift */; };
+		B517A32C1EC6553000EDF73A /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A32B1EC6553000EDF73A /* GameSettings.swift */; };
+		B517A32E1EC6621700EDF73A /* CollisionBitMasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A32D1EC6621700EDF73A /* CollisionBitMasks.swift */; };
+		B517A3301EC6629700EDF73A /* DelayFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517A32F1EC6629700EDF73A /* DelayFunction.swift */; };
+		B51C58C81ED0980700986919 /* starsBG.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58C71ED0980700986919 /* starsBG.png */; };
+		B51C58CF1ED09BEF00986919 /* alien2.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58CD1ED09BEF00986919 /* alien2.png */; };
+		B51C58D01ED09BEF00986919 /* alien1.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58CE1ED09BEF00986919 /* alien1.png */; };
+		B51C58D21ED09CDE00986919 /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58D11ED09CDE00986919 /* playButton.png */; };
+		B51C58D41ED0A0C400986919 /* moon.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58D31ED0A0C400986919 /* moon.png */; };
+		B51C58D61ED0A13600986919 /* DialogBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51C58D51ED0A13600986919 /* DialogBox.swift */; };
+		B51C58D91ED0A2AD00986919 /* dialogBoxLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58D71ED0A2AD00986919 /* dialogBoxLeft.png */; };
+		B51C58DA1ED0A2AD00986919 /* dialogBoxRight.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58D81ED0A2AD00986919 /* dialogBoxRight.png */; };
+		B51C58DC1ED0AA1800986919 /* TextFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51C58DB1ED0AA1800986919 /* TextFormatter.swift */; };
+		B51C58E01ED0D10F00986919 /* earth.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58DF1ED0D10F00986919 /* earth.png */; };
+		B51C58E21EDB1F3800986919 /* vanchrome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51C58E11EDB1F3800986919 /* vanchrome.ttf */; };
+		B51C58E41EDB209B00986919 /* xylitol.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51C58E31EDB209B00986919 /* xylitol.ttf */; };
+		B51C58E61EDB20B000986919 /* krait.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B51C58E51EDB20B000986919 /* krait.ttf */; };
+		B51C58E81EDB25CB00986919 /* earth2.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58E71EDB25CB00986919 /* earth2.png */; };
+		B51C58EB1EDB277700986919 /* earth3.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58E91EDB277700986919 /* earth3.png */; };
+		B51C58EC1EDB277700986919 /* earth4.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58EA1EDB277700986919 /* earth4.png */; };
+		B51C58EE1EDB285900986919 /* earth5.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58ED1EDB285900986919 /* earth5.png */; };
+		B51C58F01EDB293F00986919 /* boomBox2.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58EF1EDB293F00986919 /* boomBox2.png */; };
+		B51C58F51EDB4F4A00986919 /* alienShipTop.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58F11EDB4F4A00986919 /* alienShipTop.png */; };
+		B51C58F61EDB4F4A00986919 /* alienShipBottom.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58F21EDB4F4A00986919 /* alienShipBottom.png */; };
+		B51C58F71EDB4F4A00986919 /* alienShipBody2.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58F31EDB4F4A00986919 /* alienShipBody2.png */; };
+		B51C58F81EDB4F4A00986919 /* alienShipBody1.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58F41EDB4F4A00986919 /* alienShipBody1.png */; };
+		B51C58FA1EDB4F7300986919 /* AlienShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51C58F91EDB4F7300986919 /* AlienShip.swift */; };
+		B51C58FC1EDB653700986919 /* cityBG.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58FB1EDB653700986919 /* cityBG.png */; };
+		B51C58FF1EDCB86A00986919 /* carLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58FD1EDCB86A00986919 /* carLeft.png */; };
+		B51C59001EDCB86A00986919 /* carRight.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C58FE1EDCB86A00986919 /* carRight.png */; };
+		B51C59021EDCB87D00986919 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51C59011EDCB87D00986919 /* Vehicle.swift */; };
+		B51C59271EE46B7400986919 /* afterTheseMessages.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59041EE46B7400986919 /* afterTheseMessages.mp3 */; };
+		B51C59281EE46B7400986919 /* anotherAd.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59051EE46B7400986919 /* anotherAd.mp3 */; };
+		B51C59291EE46B7400986919 /* anyDayNow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59061EE46B7400986919 /* anyDayNow.mp3 */; };
+		B51C592A1EE46B7400986919 /* beamSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59071EE46B7400986919 /* beamSound.mp3 */; };
+		B51C592B1EE46B7400986919 /* beef.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59081EE46B7400986919 /* beef.mp3 */; };
+		B51C592C1EE46B7400986919 /* claimed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59091EE46B7400986919 /* claimed.mp3 */; };
+		B51C592D1EE46B7400986919 /* cuntach.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C590A1EE46B7400986919 /* cuntach.mp3 */; };
+		B51C592E1EE46B7400986919 /* dontMind.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C590B1EE46B7400986919 /* dontMind.mp3 */; };
+		B51C592F1EE46B7400986919 /* funkyTown.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C590C1EE46B7400986919 /* funkyTown.mp3 */; };
+		B51C59301EE46B7400986919 /* gameOn.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C590D1EE46B7400986919 /* gameOn.mp3 */; };
+		B51C59311EE46B7400986919 /* ifOnlyInRed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C590E1EE46B7400986919 /* ifOnlyInRed.mp3 */; };
+		B51C59321EE46B7400986919 /* imBusy1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C590F1EE46B7400986919 /* imBusy1.mp3 */; };
+		B51C59331EE46B7400986919 /* imBusy2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59101EE46B7400986919 /* imBusy2.mp3 */; };
+		B51C59341EE46B7400986919 /* imBusy3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59111EE46B7400986919 /* imBusy3.mp3 */; };
+		B51C59351EE46B7400986919 /* isAdDone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59121EE46B7400986919 /* isAdDone.mp3 */; };
+		B51C59361EE46B7400986919 /* laugh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59131EE46B7400986919 /* laugh.mp3 */; };
+		B51C59371EE46B7400986919 /* likeSand.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59141EE46B7400986919 /* likeSand.mp3 */; };
+		B51C59381EE46B7400986919 /* mikeyLikes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59151EE46B7400986919 /* mikeyLikes.mp3 */; };
+		B51C59391EE46B7400986919 /* needMoreInput.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59161EE46B7400986919 /* needMoreInput.mp3 */; };
+		B51C593A1EE46B7400986919 /* needThis.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59171EE46B7400986919 /* needThis.mp3 */; };
+		B51C593B1EE46B7400986919 /* New Recording2.m4a in Resources */ = {isa = PBXBuildFile; fileRef = B51C59181EE46B7400986919 /* New Recording2.m4a */; };
+		B51C593C1EE46B7400986919 /* part0.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59191EE46B7400986919 /* part0.mp3 */; };
+		B51C593D1EE46B7400986919 /* radical.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C591A1EE46B7400986919 /* radical.mp3 */; };
+		B51C593E1EE46B7400986919 /* radSauce.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C591B1EE46B7400986919 /* radSauce.mp3 */; };
+		B51C593F1EE46B7400986919 /* reallyAgain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C591C1EE46B7400986919 /* reallyAgain.mp3 */; };
+		B51C59401EE46B7400986919 /* runningOutOfJuice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C591D1EE46B7400986919 /* runningOutOfJuice.mp3 */; };
+		B51C59411EE46B7400986919 /* score.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C591E1EE46B7400986919 /* score.mp3 */; };
+		B51C59421EE46B7400986919 /* soAnyways.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C591F1EE46B7400986919 /* soAnyways.mp3 */; };
+		B51C59431EE46B7400986919 /* sorry.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59201EE46B7400986919 /* sorry.mp3 */; };
+		B51C59441EE46B7400986919 /* sucker.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59211EE46B7400986919 /* sucker.mp3 */; };
+		B51C59451EE46B7400986919 /* thatsNice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59221EE46B7400986919 /* thatsNice.mp3 */; };
+		B51C59461EE46B7400986919 /* waitingOnYou.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59231EE46B7400986919 /* waitingOnYou.mp3 */; };
+		B51C59471EE46B7400986919 /* whatsYourDamage.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59241EE46B7400986919 /* whatsYourDamage.mp3 */; };
+		B51C59481EE46B7400986919 /* whoWouldWant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59251EE46B7400986919 /* whoWouldWant.mp3 */; };
+		B51C59491EE46B7400986919 /* youllRegret.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59261EE46B7400986919 /* youllRegret.mp3 */; };
+		B588B7B01ECBEE9300831F23 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B588B7AF1ECBEE9300831F23 /* Item.swift */; };
+		B588B7B21ECBEFC300831F23 /* boomBox.png in Resources */ = {isa = PBXBuildFile; fileRef = B588B7B11ECBEFC300831F23 /* boomBox.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B505786B1EC8008A00705844 /* Sizes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sizes.swift; sourceTree = "<group>"; };
+		B50E69D11ECBD9920068ABE7 /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		B514D1721EC8F23F00E0845F /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		B514D1741EC8F4A600E0845F /* ABCompleteParticleEmitter.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ABCompleteParticleEmitter.sks; sourceTree = "<group>"; };
+		B514D1761EC8F57500E0845F /* ParticleEmitters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParticleEmitters.swift; sourceTree = "<group>"; };
+		B514D1781EC90FC400E0845F /* man2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man2.png; sourceTree = "<group>"; };
+		B514D17A1EC9101100E0845F /* man3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man3.png; sourceTree = "<group>"; };
+		B514D17C1EC9106000E0845F /* man4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man4.png; sourceTree = "<group>"; };
+		B517A2EB1EC5509200EDF73A /* Alien Abduction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Alien Abduction.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B517A2EE1EC5509200EDF73A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B517A2F41EC5509200EDF73A /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		B517A2F61EC5509200EDF73A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		B517A2F91EC5509200EDF73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B517A2FB1EC5509200EDF73A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B517A2FE1EC5509200EDF73A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B517A3001EC5509200EDF73A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B517A30A1EC5535F00EDF73A /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		B517A30C1EC5539700EDF73A /* SettingsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsScene.swift; sourceTree = "<group>"; };
+		B517A30E1EC5540200EDF73A /* SceneTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneTransition.swift; sourceTree = "<group>"; };
+		B517A3101EC5540A00EDF73A /* Scale.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scale.swift; sourceTree = "<group>"; };
+		B517A3121EC5541400EDF73A /* Positions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Positions.swift; sourceTree = "<group>"; };
+		B517A3141EC5541E00EDF73A /* DegToRads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DegToRads.swift; sourceTree = "<group>"; };
+		B517A3161EC5543000EDF73A /* ZPositions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZPositions.swift; sourceTree = "<group>"; };
+		B517A31D1EC5595C00EDF73A /* Abductee.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Abductee.swift; sourceTree = "<group>"; };
+		B517A31F1EC55A5000EDF73A /* alienShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alienShip.png; sourceTree = "<group>"; };
+		B517A3211EC55B1900EDF73A /* PowerMeter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerMeter.swift; sourceTree = "<group>"; };
+		B517A3231EC55F2700EDF73A /* TractorBeam.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TractorBeam.swift; sourceTree = "<group>"; };
+		B517A3251EC5603200EDF73A /* man1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man1.png; sourceTree = "<group>"; };
+		B517A3271EC652FA00EDF73A /* RandomFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomFunctions.swift; sourceTree = "<group>"; };
+		B517A3291EC6545F00EDF73A /* Directions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Directions.swift; sourceTree = "<group>"; };
+		B517A32B1EC6553000EDF73A /* GameSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
+		B517A32D1EC6621700EDF73A /* CollisionBitMasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollisionBitMasks.swift; sourceTree = "<group>"; };
+		B517A32F1EC6629700EDF73A /* DelayFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DelayFunction.swift; sourceTree = "<group>"; };
+		B51C58C71ED0980700986919 /* starsBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starsBG.png; sourceTree = "<group>"; };
+		B51C58CD1ED09BEF00986919 /* alien2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alien2.png; sourceTree = "<group>"; };
+		B51C58CE1ED09BEF00986919 /* alien1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alien1.png; sourceTree = "<group>"; };
+		B51C58D11ED09CDE00986919 /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
+		B51C58D31ED0A0C400986919 /* moon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = moon.png; sourceTree = "<group>"; };
+		B51C58D51ED0A13600986919 /* DialogBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogBox.swift; sourceTree = "<group>"; };
+		B51C58D71ED0A2AD00986919 /* dialogBoxLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dialogBoxLeft.png; sourceTree = "<group>"; };
+		B51C58D81ED0A2AD00986919 /* dialogBoxRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dialogBoxRight.png; sourceTree = "<group>"; };
+		B51C58DB1ED0AA1800986919 /* TextFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFormatter.swift; sourceTree = "<group>"; };
+		B51C58DF1ED0D10F00986919 /* earth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earth.png; sourceTree = "<group>"; };
+		B51C58E11EDB1F3800986919 /* vanchrome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = vanchrome.ttf; sourceTree = "<group>"; };
+		B51C58E31EDB209B00986919 /* xylitol.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = xylitol.ttf; sourceTree = "<group>"; };
+		B51C58E51EDB20B000986919 /* krait.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = krait.ttf; sourceTree = "<group>"; };
+		B51C58E71EDB25CB00986919 /* earth2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earth2.png; sourceTree = "<group>"; };
+		B51C58E91EDB277700986919 /* earth3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earth3.png; sourceTree = "<group>"; };
+		B51C58EA1EDB277700986919 /* earth4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earth4.png; sourceTree = "<group>"; };
+		B51C58ED1EDB285900986919 /* earth5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = earth5.png; sourceTree = "<group>"; };
+		B51C58EF1EDB293F00986919 /* boomBox2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boomBox2.png; sourceTree = "<group>"; };
+		B51C58F11EDB4F4A00986919 /* alienShipTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alienShipTop.png; sourceTree = "<group>"; };
+		B51C58F21EDB4F4A00986919 /* alienShipBottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alienShipBottom.png; sourceTree = "<group>"; };
+		B51C58F31EDB4F4A00986919 /* alienShipBody2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alienShipBody2.png; sourceTree = "<group>"; };
+		B51C58F41EDB4F4A00986919 /* alienShipBody1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alienShipBody1.png; sourceTree = "<group>"; };
+		B51C58F91EDB4F7300986919 /* AlienShip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlienShip.swift; sourceTree = "<group>"; };
+		B51C58FB1EDB653700986919 /* cityBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cityBG.png; sourceTree = "<group>"; };
+		B51C58FD1EDCB86A00986919 /* carLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carLeft.png; sourceTree = "<group>"; };
+		B51C58FE1EDCB86A00986919 /* carRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carRight.png; sourceTree = "<group>"; };
+		B51C59011EDCB87D00986919 /* Vehicle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		B51C59041EE46B7400986919 /* afterTheseMessages.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = afterTheseMessages.mp3; sourceTree = "<group>"; };
+		B51C59051EE46B7400986919 /* anotherAd.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = anotherAd.mp3; sourceTree = "<group>"; };
+		B51C59061EE46B7400986919 /* anyDayNow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = anyDayNow.mp3; sourceTree = "<group>"; };
+		B51C59071EE46B7400986919 /* beamSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beamSound.mp3; sourceTree = "<group>"; };
+		B51C59081EE46B7400986919 /* beef.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beef.mp3; sourceTree = "<group>"; };
+		B51C59091EE46B7400986919 /* claimed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = claimed.mp3; sourceTree = "<group>"; };
+		B51C590A1EE46B7400986919 /* cuntach.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = cuntach.mp3; sourceTree = "<group>"; };
+		B51C590B1EE46B7400986919 /* dontMind.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = dontMind.mp3; sourceTree = "<group>"; };
+		B51C590C1EE46B7400986919 /* funkyTown.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = funkyTown.mp3; sourceTree = "<group>"; };
+		B51C590D1EE46B7400986919 /* gameOn.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = gameOn.mp3; sourceTree = "<group>"; };
+		B51C590E1EE46B7400986919 /* ifOnlyInRed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ifOnlyInRed.mp3; sourceTree = "<group>"; };
+		B51C590F1EE46B7400986919 /* imBusy1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = imBusy1.mp3; sourceTree = "<group>"; };
+		B51C59101EE46B7400986919 /* imBusy2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = imBusy2.mp3; sourceTree = "<group>"; };
+		B51C59111EE46B7400986919 /* imBusy3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = imBusy3.mp3; sourceTree = "<group>"; };
+		B51C59121EE46B7400986919 /* isAdDone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = isAdDone.mp3; sourceTree = "<group>"; };
+		B51C59131EE46B7400986919 /* laugh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laugh.mp3; sourceTree = "<group>"; };
+		B51C59141EE46B7400986919 /* likeSand.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = likeSand.mp3; sourceTree = "<group>"; };
+		B51C59151EE46B7400986919 /* mikeyLikes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mikeyLikes.mp3; sourceTree = "<group>"; };
+		B51C59161EE46B7400986919 /* needMoreInput.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = needMoreInput.mp3; sourceTree = "<group>"; };
+		B51C59171EE46B7400986919 /* needThis.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = needThis.mp3; sourceTree = "<group>"; };
+		B51C59181EE46B7400986919 /* New Recording2.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "New Recording2.m4a"; sourceTree = "<group>"; };
+		B51C59191EE46B7400986919 /* part0.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = part0.mp3; sourceTree = "<group>"; };
+		B51C591A1EE46B7400986919 /* radical.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = radical.mp3; sourceTree = "<group>"; };
+		B51C591B1EE46B7400986919 /* radSauce.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = radSauce.mp3; sourceTree = "<group>"; };
+		B51C591C1EE46B7400986919 /* reallyAgain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = reallyAgain.mp3; sourceTree = "<group>"; };
+		B51C591D1EE46B7400986919 /* runningOutOfJuice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = runningOutOfJuice.mp3; sourceTree = "<group>"; };
+		B51C591E1EE46B7400986919 /* score.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = score.mp3; sourceTree = "<group>"; };
+		B51C591F1EE46B7400986919 /* soAnyways.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = soAnyways.mp3; sourceTree = "<group>"; };
+		B51C59201EE46B7400986919 /* sorry.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sorry.mp3; sourceTree = "<group>"; };
+		B51C59211EE46B7400986919 /* sucker.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sucker.mp3; sourceTree = "<group>"; };
+		B51C59221EE46B7400986919 /* thatsNice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = thatsNice.mp3; sourceTree = "<group>"; };
+		B51C59231EE46B7400986919 /* waitingOnYou.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = waitingOnYou.mp3; sourceTree = "<group>"; };
+		B51C59241EE46B7400986919 /* whatsYourDamage.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whatsYourDamage.mp3; sourceTree = "<group>"; };
+		B51C59251EE46B7400986919 /* whoWouldWant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whoWouldWant.mp3; sourceTree = "<group>"; };
+		B51C59261EE46B7400986919 /* youllRegret.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = youllRegret.mp3; sourceTree = "<group>"; };
+		B588B7AF1ECBEE9300831F23 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		B588B7B11ECBEFC300831F23 /* boomBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boomBox.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B517A2E81EC5509200EDF73A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B517A2E21EC5509200EDF73A = {
+			isa = PBXGroup;
+			children = (
+				B517A2ED1EC5509200EDF73A /* Alien Abduction */,
+				B517A2EC1EC5509200EDF73A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B517A2EC1EC5509200EDF73A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B517A2EB1EC5509200EDF73A /* Alien Abduction.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B517A2ED1EC5509200EDF73A /* Alien Abduction */ = {
+			isa = PBXGroup;
+			children = (
+				B517A31C1EC5594A00EDF73A /* Classes */,
+				B517A3061EC5511300EDF73A /* Controllers */,
+				B517A3071EC5512600EDF73A /* Scenes */,
+				B517A3081EC5513400EDF73A /* Support Files */,
+				B517A3091EC5515100EDF73A /* Assets */,
+				B517A2FB1EC5509200EDF73A /* Assets.xcassets */,
+			);
+			path = "Alien Abduction";
+			sourceTree = "<group>";
+		};
+		B517A3061EC5511300EDF73A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B517A2F61EC5509200EDF73A /* GameViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		B517A3071EC5512600EDF73A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B517A2F41EC5509200EDF73A /* GameScene.swift */,
+				B517A30A1EC5535F00EDF73A /* MenuScene.swift */,
+				B517A30C1EC5539700EDF73A /* SettingsScene.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		B517A3081EC5513400EDF73A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B517A2EE1EC5509200EDF73A /* AppDelegate.swift */,
+				B514D1741EC8F4A600E0845F /* ABCompleteParticleEmitter.sks */,
+				B517A32D1EC6621700EDF73A /* CollisionBitMasks.swift */,
+				B514D1721EC8F23F00E0845F /* Colors.swift */,
+				B517A3141EC5541E00EDF73A /* DegToRads.swift */,
+				B517A32F1EC6629700EDF73A /* DelayFunction.swift */,
+				B517A3291EC6545F00EDF73A /* Directions.swift */,
+				B517A32B1EC6553000EDF73A /* GameSettings.swift */,
+				B514D1761EC8F57500E0845F /* ParticleEmitters.swift */,
+				B517A3121EC5541400EDF73A /* Positions.swift */,
+				B517A3271EC652FA00EDF73A /* RandomFunctions.swift */,
+				B517A3101EC5540A00EDF73A /* Scale.swift */,
+				B517A30E1EC5540200EDF73A /* SceneTransition.swift */,
+				B505786B1EC8008A00705844 /* Sizes.swift */,
+				B50E69D11ECBD9920068ABE7 /* SoundPlayer.swift */,
+				B51C58DB1ED0AA1800986919 /* TextFormatter.swift */,
+				B517A3161EC5543000EDF73A /* ZPositions.swift */,
+				B517A2FD1EC5509200EDF73A /* LaunchScreen.storyboard */,
+				B517A2F81EC5509200EDF73A /* Main.storyboard */,
+				B517A3001EC5509200EDF73A /* Info.plist */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		B517A3091EC5515100EDF73A /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B51C59031EE4670D00986919 /* Fonts */,
+				B517A31A1EC5585300EDF73A /* Images */,
+				B517A31B1EC5585B00EDF73A /* Sounds */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		B517A31A1EC5585300EDF73A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B51C58CE1ED09BEF00986919 /* alien1.png */,
+				B51C58CD1ED09BEF00986919 /* alien2.png */,
+				B517A31F1EC55A5000EDF73A /* alienShip.png */,
+				B51C58F11EDB4F4A00986919 /* alienShipTop.png */,
+				B51C58F21EDB4F4A00986919 /* alienShipBottom.png */,
+				B51C58F31EDB4F4A00986919 /* alienShipBody2.png */,
+				B51C58F41EDB4F4A00986919 /* alienShipBody1.png */,
+				B588B7B11ECBEFC300831F23 /* boomBox.png */,
+				B51C58EF1EDB293F00986919 /* boomBox2.png */,
+				B51C58FB1EDB653700986919 /* cityBG.png */,
+				B51C58FD1EDCB86A00986919 /* carLeft.png */,
+				B51C58FE1EDCB86A00986919 /* carRight.png */,
+				B51C58D71ED0A2AD00986919 /* dialogBoxLeft.png */,
+				B51C58D81ED0A2AD00986919 /* dialogBoxRight.png */,
+				B51C58E71EDB25CB00986919 /* earth2.png */,
+				B51C58E91EDB277700986919 /* earth3.png */,
+				B51C58EA1EDB277700986919 /* earth4.png */,
+				B51C58ED1EDB285900986919 /* earth5.png */,
+				B51C58DF1ED0D10F00986919 /* earth.png */,
+				B517A3251EC5603200EDF73A /* man1.png */,
+				B514D1781EC90FC400E0845F /* man2.png */,
+				B514D17A1EC9101100E0845F /* man3.png */,
+				B514D17C1EC9106000E0845F /* man4.png */,
+				B51C58D31ED0A0C400986919 /* moon.png */,
+				B51C58D11ED09CDE00986919 /* playButton.png */,
+				B51C58C71ED0980700986919 /* starsBG.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		B517A31B1EC5585B00EDF73A /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				B51C59041EE46B7400986919 /* afterTheseMessages.mp3 */,
+				B51C59051EE46B7400986919 /* anotherAd.mp3 */,
+				B51C59061EE46B7400986919 /* anyDayNow.mp3 */,
+				B51C59071EE46B7400986919 /* beamSound.mp3 */,
+				B51C59081EE46B7400986919 /* beef.mp3 */,
+				B51C59091EE46B7400986919 /* claimed.mp3 */,
+				B51C590A1EE46B7400986919 /* cuntach.mp3 */,
+				B51C590B1EE46B7400986919 /* dontMind.mp3 */,
+				B51C590C1EE46B7400986919 /* funkyTown.mp3 */,
+				B51C590D1EE46B7400986919 /* gameOn.mp3 */,
+				B51C590E1EE46B7400986919 /* ifOnlyInRed.mp3 */,
+				B51C590F1EE46B7400986919 /* imBusy1.mp3 */,
+				B51C59101EE46B7400986919 /* imBusy2.mp3 */,
+				B51C59111EE46B7400986919 /* imBusy3.mp3 */,
+				B51C59121EE46B7400986919 /* isAdDone.mp3 */,
+				B51C59131EE46B7400986919 /* laugh.mp3 */,
+				B51C59141EE46B7400986919 /* likeSand.mp3 */,
+				B51C59151EE46B7400986919 /* mikeyLikes.mp3 */,
+				B51C59161EE46B7400986919 /* needMoreInput.mp3 */,
+				B51C59171EE46B7400986919 /* needThis.mp3 */,
+				B51C59181EE46B7400986919 /* New Recording2.m4a */,
+				B51C59191EE46B7400986919 /* part0.mp3 */,
+				B51C591A1EE46B7400986919 /* radical.mp3 */,
+				B51C591B1EE46B7400986919 /* radSauce.mp3 */,
+				B51C591C1EE46B7400986919 /* reallyAgain.mp3 */,
+				B51C591D1EE46B7400986919 /* runningOutOfJuice.mp3 */,
+				B51C591E1EE46B7400986919 /* score.mp3 */,
+				B51C591F1EE46B7400986919 /* soAnyways.mp3 */,
+				B51C59201EE46B7400986919 /* sorry.mp3 */,
+				B51C59211EE46B7400986919 /* sucker.mp3 */,
+				B51C59221EE46B7400986919 /* thatsNice.mp3 */,
+				B51C59231EE46B7400986919 /* waitingOnYou.mp3 */,
+				B51C59241EE46B7400986919 /* whatsYourDamage.mp3 */,
+				B51C59251EE46B7400986919 /* whoWouldWant.mp3 */,
+				B51C59261EE46B7400986919 /* youllRegret.mp3 */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		B517A31C1EC5594A00EDF73A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				B517A31D1EC5595C00EDF73A /* Abductee.swift */,
+				B51C58F91EDB4F7300986919 /* AlienShip.swift */,
+				B51C58D51ED0A13600986919 /* DialogBox.swift */,
+				B588B7AF1ECBEE9300831F23 /* Item.swift */,
+				B517A3211EC55B1900EDF73A /* PowerMeter.swift */,
+				B517A3231EC55F2700EDF73A /* TractorBeam.swift */,
+				B51C59011EDCB87D00986919 /* Vehicle.swift */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		B51C59031EE4670D00986919 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B51C58E51EDB20B000986919 /* krait.ttf */,
+				B51C58E11EDB1F3800986919 /* vanchrome.ttf */,
+				B51C58E31EDB209B00986919 /* xylitol.ttf */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B517A2EA1EC5509200EDF73A /* Alien Abduction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B517A3031EC5509200EDF73A /* Build configuration list for PBXNativeTarget "Alien Abduction" */;
+			buildPhases = (
+				B517A2E71EC5509200EDF73A /* Sources */,
+				B517A2E81EC5509200EDF73A /* Frameworks */,
+				B517A2E91EC5509200EDF73A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Alien Abduction";
+			productName = "Alien Abduction";
+			productReference = B517A2EB1EC5509200EDF73A /* Alien Abduction.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B517A2E31EC5509200EDF73A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Ramiro Beltran";
+				TargetAttributes = {
+					B517A2EA1EC5509200EDF73A = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = VHQ88CT5TL;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = B517A2E61EC5509200EDF73A /* Build configuration list for PBXProject "Alien Abduction" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B517A2E21EC5509200EDF73A;
+			productRefGroup = B517A2EC1EC5509200EDF73A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B517A2EA1EC5509200EDF73A /* Alien Abduction */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B517A2E91EC5509200EDF73A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B51C593A1EE46B7400986919 /* needThis.mp3 in Resources */,
+				B51C59311EE46B7400986919 /* ifOnlyInRed.mp3 in Resources */,
+				B517A2FA1EC5509200EDF73A /* Main.storyboard in Resources */,
+				B51C593B1EE46B7400986919 /* New Recording2.m4a in Resources */,
+				B51C593E1EE46B7400986919 /* radSauce.mp3 in Resources */,
+				B51C59421EE46B7400986919 /* soAnyways.mp3 in Resources */,
+				B51C59391EE46B7400986919 /* needMoreInput.mp3 in Resources */,
+				B51C58D01ED09BEF00986919 /* alien1.png in Resources */,
+				B51C59411EE46B7400986919 /* score.mp3 in Resources */,
+				B51C58D41ED0A0C400986919 /* moon.png in Resources */,
+				B51C58EB1EDB277700986919 /* earth3.png in Resources */,
+				B514D17D1EC9106000E0845F /* man4.png in Resources */,
+				B51C59431EE46B7400986919 /* sorry.mp3 in Resources */,
+				B51C59441EE46B7400986919 /* sucker.mp3 in Resources */,
+				B51C58F81EDB4F4A00986919 /* alienShipBody1.png in Resources */,
+				B51C59361EE46B7400986919 /* laugh.mp3 in Resources */,
+				B51C58FF1EDCB86A00986919 /* carLeft.png in Resources */,
+				B514D1791EC90FC400E0845F /* man2.png in Resources */,
+				B51C58F61EDB4F4A00986919 /* alienShipBottom.png in Resources */,
+				B51C58E81EDB25CB00986919 /* earth2.png in Resources */,
+				B51C58D91ED0A2AD00986919 /* dialogBoxLeft.png in Resources */,
+				B51C58FC1EDB653700986919 /* cityBG.png in Resources */,
+				B51C58E21EDB1F3800986919 /* vanchrome.ttf in Resources */,
+				B51C593C1EE46B7400986919 /* part0.mp3 in Resources */,
+				B514D17B1EC9101100E0845F /* man3.png in Resources */,
+				B51C59401EE46B7400986919 /* runningOutOfJuice.mp3 in Resources */,
+				B588B7B21ECBEFC300831F23 /* boomBox.png in Resources */,
+				B51C59331EE46B7400986919 /* imBusy2.mp3 in Resources */,
+				B51C59351EE46B7400986919 /* isAdDone.mp3 in Resources */,
+				B51C592D1EE46B7400986919 /* cuntach.mp3 in Resources */,
+				B51C58DA1ED0A2AD00986919 /* dialogBoxRight.png in Resources */,
+				B50E69D01ECBD5EE0068ABE7 /* Assets.xcassets in Resources */,
+				B51C592F1EE46B7400986919 /* funkyTown.mp3 in Resources */,
+				B51C59271EE46B7400986919 /* afterTheseMessages.mp3 in Resources */,
+				B51C59471EE46B7400986919 /* whatsYourDamage.mp3 in Resources */,
+				B51C59491EE46B7400986919 /* youllRegret.mp3 in Resources */,
+				B517A3201EC55A5000EDF73A /* alienShip.png in Resources */,
+				B51C58F71EDB4F4A00986919 /* alienShipBody2.png in Resources */,
+				B51C592A1EE46B7400986919 /* beamSound.mp3 in Resources */,
+				B51C59461EE46B7400986919 /* waitingOnYou.mp3 in Resources */,
+				B51C59321EE46B7400986919 /* imBusy1.mp3 in Resources */,
+				B51C58D21ED09CDE00986919 /* playButton.png in Resources */,
+				B517A3261EC5603200EDF73A /* man1.png in Resources */,
+				B51C59481EE46B7400986919 /* whoWouldWant.mp3 in Resources */,
+				B51C58EC1EDB277700986919 /* earth4.png in Resources */,
+				B51C58C81ED0980700986919 /* starsBG.png in Resources */,
+				B51C58F01EDB293F00986919 /* boomBox2.png in Resources */,
+				B51C58E41EDB209B00986919 /* xylitol.ttf in Resources */,
+				B51C59381EE46B7400986919 /* mikeyLikes.mp3 in Resources */,
+				B51C59301EE46B7400986919 /* gameOn.mp3 in Resources */,
+				B51C59451EE46B7400986919 /* thatsNice.mp3 in Resources */,
+				B51C58CF1ED09BEF00986919 /* alien2.png in Resources */,
+				B51C593D1EE46B7400986919 /* radical.mp3 in Resources */,
+				B51C59341EE46B7400986919 /* imBusy3.mp3 in Resources */,
+				B51C593F1EE46B7400986919 /* reallyAgain.mp3 in Resources */,
+				B51C59001EDCB86A00986919 /* carRight.png in Resources */,
+				B51C592E1EE46B7400986919 /* dontMind.mp3 in Resources */,
+				B51C58E01ED0D10F00986919 /* earth.png in Resources */,
+				B51C58F51EDB4F4A00986919 /* alienShipTop.png in Resources */,
+				B517A2FF1EC5509200EDF73A /* LaunchScreen.storyboard in Resources */,
+				B51C58EE1EDB285900986919 /* earth5.png in Resources */,
+				B51C59371EE46B7400986919 /* likeSand.mp3 in Resources */,
+				B514D1751EC8F4A600E0845F /* ABCompleteParticleEmitter.sks in Resources */,
+				B51C59291EE46B7400986919 /* anyDayNow.mp3 in Resources */,
+				B51C592C1EE46B7400986919 /* claimed.mp3 in Resources */,
+				B51C58E61EDB20B000986919 /* krait.ttf in Resources */,
+				B51C592B1EE46B7400986919 /* beef.mp3 in Resources */,
+				B51C59281EE46B7400986919 /* anotherAd.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B517A2E71EC5509200EDF73A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B51C58DC1ED0AA1800986919 /* TextFormatter.swift in Sources */,
+				B517A2F51EC5509200EDF73A /* GameScene.swift in Sources */,
+				B514D1731EC8F23F00E0845F /* Colors.swift in Sources */,
+				B50E69D21ECBD9920068ABE7 /* SoundPlayer.swift in Sources */,
+				B517A3301EC6629700EDF73A /* DelayFunction.swift in Sources */,
+				B517A30F1EC5540200EDF73A /* SceneTransition.swift in Sources */,
+				B517A3281EC652FA00EDF73A /* RandomFunctions.swift in Sources */,
+				B588B7B01ECBEE9300831F23 /* Item.swift in Sources */,
+				B517A3151EC5541E00EDF73A /* DegToRads.swift in Sources */,
+				B514D1771EC8F57500E0845F /* ParticleEmitters.swift in Sources */,
+				B517A32A1EC6545F00EDF73A /* Directions.swift in Sources */,
+				B51C58FA1EDB4F7300986919 /* AlienShip.swift in Sources */,
+				B517A3131EC5541400EDF73A /* Positions.swift in Sources */,
+				B517A32E1EC6621700EDF73A /* CollisionBitMasks.swift in Sources */,
+				B505786C1EC8008A00705844 /* Sizes.swift in Sources */,
+				B517A30B1EC5535F00EDF73A /* MenuScene.swift in Sources */,
+				B517A3221EC55B1900EDF73A /* PowerMeter.swift in Sources */,
+				B517A32C1EC6553000EDF73A /* GameSettings.swift in Sources */,
+				B517A2F71EC5509200EDF73A /* GameViewController.swift in Sources */,
+				B517A3111EC5540A00EDF73A /* Scale.swift in Sources */,
+				B517A31E1EC5595C00EDF73A /* Abductee.swift in Sources */,
+				B51C58D61ED0A13600986919 /* DialogBox.swift in Sources */,
+				B51C59021EDCB87D00986919 /* Vehicle.swift in Sources */,
+				B517A30D1EC5539700EDF73A /* SettingsScene.swift in Sources */,
+				B517A2EF1EC5509200EDF73A /* AppDelegate.swift in Sources */,
+				B517A3241EC55F2700EDF73A /* TractorBeam.swift in Sources */,
+				B517A3171EC5543000EDF73A /* ZPositions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B517A2F81EC5509200EDF73A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B517A2F91EC5509200EDF73A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B517A2FD1EC5509200EDF73A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B517A2FE1EC5509200EDF73A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B517A3011EC5509200EDF73A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B517A3021EC5509200EDF73A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B517A3041EC5509200EDF73A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VHQ88CT5TL;
+				INFOPLIST_FILE = "$(SRCROOT)/Alien Abduction/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.idratherbcoding.Alien-Abduction";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		B517A3051EC5509200EDF73A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VHQ88CT5TL;
+				INFOPLIST_FILE = "$(SRCROOT)/Alien Abduction/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.idratherbcoding.Alien-Abduction";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B517A2E61EC5509200EDF73A /* Build configuration list for PBXProject "Alien Abduction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B517A3011EC5509200EDF73A /* Debug */,
+				B517A3021EC5509200EDF73A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B517A3031EC5509200EDF73A /* Build configuration list for PBXNativeTarget "Alien Abduction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B517A3041EC5509200EDF73A /* Debug */,
+				B517A3051EC5509200EDF73A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B517A2E31EC5509200EDF73A /* Project object */;
+}

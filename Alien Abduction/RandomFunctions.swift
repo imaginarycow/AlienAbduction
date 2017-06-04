@@ -8,6 +8,11 @@
 
 import SpriteKit
 
+func getRandomColor() -> UIColor {
+    
+    return colorsArray[getRandomNumber(max: colorsArray.count - 1)]
+}
+
 func getRandomAbductee() -> [Any] {
     
     return possibleAbductees[getRandomNumber(max: possibleAbductees.count - 1)]

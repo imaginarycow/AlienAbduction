@@ -7,17 +7,19 @@
 //
 
 import SpriteKit
-
+import AVFoundation
 
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
     
     let backButton = SKLabelNode(text: "Back")
     let bg = SKSpriteNode(imageNamed: "cityBG.png")
-    let alienShip = SKSpriteNode(imageNamed: "alienShip.png")
+    let alienShip = AlienShip()
     
-    var powerLevel:CGFloat = 100
+
+    let powerMeter = PowerMeter()
     var gameTimer:Timer!
+    var counter = 0
     var selectedAbductee:Abductee?
     var abductees:[Abductee] = []
     var possibleAbductees:[Abductee] = []
@@ -30,6 +32,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //level booleans
     var isCloaked: Bool = false
     var tractorBeamInUse:Bool = false
+    var alienShipIsReady:Bool = false
+    var alienShipCrashed:Bool = false
     var abducteeWasSelected:Bool = false
     var abducteeIsInBeam:Bool = false
     var abductionCompleted:Bool = false
@@ -37,13 +41,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     override func didMove(to view: SKView) {
         
-        
         physicsWorld.gravity = CGVector(dx: 0.0, dy: -9.8)
         self.physicsWorld.contactDelegate = self
         
         setBackground()
         setButtons()
         setAlienShip()
+        setNewItemInsScene()
         
         gameTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(runGameTimer), userInfo: nil, repeats: true)
         
@@ -58,6 +62,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     //game actions that run every second
     func runGameTimer() {
         
+        counter += 1
+        
+        if counter > 1 {
+            alienShip.flashLights()
+        }
+        
         if currNumberOfAbductees < maxABInView {
             setNewAbductee()
         }
@@ -66,7 +76,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             node, stop in
             
             let ab = node as! Abductee
-            if !ab.isSelected{
+            if !ab.isSelected {
                 if self.tractorBeamInUse {
                     ab.run()
                 }else {
@@ -104,6 +114,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         currNumberOfAbductees = count
     }
     
+    func setNewItemInsScene() {
+        let item = Item(texture: SKTexture(imageNamed: "boomBox.png"), size: CGSize(width: 30.0, height: 25.0))
+        item.position = getRandomABPosition()
+        addChild(item)
+    }
+    
     func setNewAbductee() {
     
         let randAB = getRandomAbductee()
@@ -131,6 +147,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func attemptAbduction() {
         
+        if powerMeter.powerLevel <= 0 {
+            return
+        }
+        
         let abCurrPosition = selectedAbductee?.position
         
         
@@ -149,6 +169,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             //move selectedAbductee towards the ship with every tap
             selectedAbductee?.position = CGPoint(x: newX!, y: newY)
+            playBeamSound()
+            
+            //take energy from power meter
+            self.powerMeter.updatePowerMeter(powerGainOrLoss: -1.25)
         }
         else{
             removeTractorBeam()
@@ -179,6 +203,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     func completeAbduction() {
         
+        if !alienShipIsReady {
+            return
+        }
+        
         abductionCompleted = false
         print("Abduction completed: \(abductionCompleted)")
         print("CompleteAbduction called")
@@ -191,6 +219,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             let ab = node as! Abductee
             if ab.isSelected{
+                self.powerMeter.updatePowerMeter(powerGainOrLoss: CGFloat(ab.points))
                 ab.removeAllActions()
                 ab.removeFromParent()
             }
@@ -198,6 +227,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
         
         removeTractorBeam()
+        
+        playScoreSound()
         
         let spark = createParticle(target: alienShip)
         spark.numParticlesToEmit = 300
@@ -269,14 +300,36 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    func crashAienShip() {
+        
+        if !alienShipCrashed {
+            removeTractorBeam()
+            alienShipIsReady = false
+            releaseAbductee()
+            alienShip.run(SKAction.move(to: CGPoint(x: centerX,y: characterStartingY), duration: 1.5))
+            //play sound
+            
+            alienShipCrashed = true
+            
+            delay(2.0) {
+                self.loseGame()
+            }
+        }
+        
+    }
+    
     func swerveAlienShip() {
+        
+        playLaugh()
         
         let randomNumber = getRandomNumber(max: 10)
         
         if randomNumber % 2 == 0 {
             alienShip.run(SKAction.moveBy(x: 80.0, y: -80.0, duration: 0.3))
+            alienShip.run(SKAction.rotate(byAngle: CGFloat(60.degreesToRadians), duration: 0.3))
             delay(1.0, completion: {
                 self.alienShip.run(SKAction.move(to: shipPosition, duration: 0.3))
+                self.alienShip.run(SKAction.rotate(byAngle: -(CGFloat)(60.degreesToRadians), duration: 0.3))
             })
         }else {
             
@@ -289,14 +342,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func setAlienShip() {
-        alienShip.zPosition = shipZPosition
-        alienShip.position = shipPosition
-        alienShip.physicsBody = SKPhysicsBody(texture: alienShip.texture!, size: alienShip.size)
-        alienShip.physicsBody?.affectedByGravity = false
-        alienShip.physicsBody?.isDynamic = false
-        alienShip.physicsBody?.categoryBitMask = shipCategory
-        alienShip.physicsBody?.contactTestBitMask = abducteeCategory
+        alienShipCrashed = false
+        alienShip.position = CGPoint(x: centerX, y: deviceHeight * 1.5)
         addChild(alienShip)
+        
+        alienShip.run(SKAction.move(to: shipPosition, duration: 2.5))
+        delay(3.0) {
+            self.alienShipIsReady = true
+        }
     }
     
     func setBackground() {
@@ -304,9 +357,30 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         bg.position = centerScreen
         bg.zPosition = bgZPosition
         addChild(bg)
+        
+        setPowerMeter()
+    }
+    
+    func setPowerMeter() {
+        
+        powerMeter.position = CGPoint(x: deviceWidth * 0.1, y: deviceHeight * 0.9)
+        addChild(powerMeter)
     }
     
     func setButtons() {
+        
+        backButton.position = CGPoint(x: deviceWidth * 0.95, y: deviceHeight * 0.9)
+        backButton.fontName = globalFont
+        backButton.fontColor = .red
+        backButton.fontSize = 18.0
+        backButton.zPosition = buttonZPosition
+        addChild(backButton)
+    }
+    
+    func loseGame() {
+        //show lose level label
+        
+        //transition to ad or menu
         
     }
     
@@ -333,7 +407,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         if firstBody.categoryBitMask == abducteeCategory && secondBody.categoryBitMask == shipCategory{
             print("abductee touching alien ship")
             print("Abduction completed: \(abductionCompleted)")
-            if !abductionCompleted {
+            if !abductionCompleted && alienShipIsReady{
                 completeAbduction()
                 abductionCompleted = true
                 print("Abduction completed: \(abductionCompleted)")
@@ -374,10 +448,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             
             if backButton.contains(location) {
                 //go back to main menu
+                transitionScene(nextScene: MenuScene(), currScene: self)
                 
             }
             
-            if alienShip.contains(location) {
+            if alienShip.contains(location) && alienShipIsReady{
                 //Play alien voice & swerve ship
                 swerveAlienShip()
             }
@@ -387,11 +462,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                 node, stop in
                 
                 let ab = node as! Abductee
-                if ab.contains(location) {
+                if ab.contains(location) && self.alienShipIsReady{
+                    //release any other abductee
+                    self.releaseAbductee()
+                    
                     //set tractor beam
                     self.selectedAbductee = ab
-//                    self.selectedAbductee?.physicsBody?.categoryBitMask = selectedAbducteeCategory
-//                    self.selectedAbductee?.physicsBody?.contactTestBitMask = beamCategory
                     ab.isSelected = true
                     self.abducteeWasSelected = true
                     self.setTractorBeam(abPosition: ab.position)
@@ -419,6 +495,15 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     
     override func update(_ currentTime: TimeInterval) {
+        
+        //check power level {
+        if powerMeter.powerLevel <= 0 && !alienShipCrashed {
+            //crash ship
+            crashAienShip()
+        }
+        
+        
+        
         // Called before each frame is rendered
         if tractorBeamInUse {
             checkSecondsBetweenTaps()
