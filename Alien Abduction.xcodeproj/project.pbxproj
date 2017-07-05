@@ -100,6 +100,14 @@
 		B51C59471EE46B7400986919 /* whatsYourDamage.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59241EE46B7400986919 /* whatsYourDamage.mp3 */; };
 		B51C59481EE46B7400986919 /* whoWouldWant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59251EE46B7400986919 /* whoWouldWant.mp3 */; };
 		B51C59491EE46B7400986919 /* youllRegret.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B51C59261EE46B7400986919 /* youllRegret.mp3 */; };
+		B51C594B1EE46BEA00986919 /* bgMusic2.wav in Resources */ = {isa = PBXBuildFile; fileRef = B51C594A1EE46BEA00986919 /* bgMusic2.wav */; };
+		B51C594D1F045E9700986919 /* spaceShip.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C594C1F045E9700986919 /* spaceShip.png */; };
+		B51C59511F049B3C00986919 /* char.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C59501F049B3C00986919 /* char.png */; };
+		B51C59531F04A21F00986919 /* alienShip2.png in Resources */ = {isa = PBXBuildFile; fileRef = B51C59521F04A21F00986919 /* alienShip2.png */; };
+		B57D85931F0C755200C7C9E0 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = B57D85921F0C755200C7C9E0 /* bg.png */; };
+		B57D85961F0C78CE00C7C9E0 /* vehicle1Left.png in Resources */ = {isa = PBXBuildFile; fileRef = B57D85941F0C78CE00C7C9E0 /* vehicle1Left.png */; };
+		B57D85971F0C78CE00C7C9E0 /* vehicle1Right.png in Resources */ = {isa = PBXBuildFile; fileRef = B57D85951F0C78CE00C7C9E0 /* vehicle1Right.png */; };
+		B57D85991F0C7EDC00C7C9E0 /* AbducteeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57D85981F0C7EDC00C7C9E0 /* AbducteeType.swift */; };
 		B588B7B01ECBEE9300831F23 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B588B7AF1ECBEE9300831F23 /* Item.swift */; };
 		B588B7B21ECBEFC300831F23 /* boomBox.png in Resources */ = {isa = PBXBuildFile; fileRef = B588B7B11ECBEFC300831F23 /* boomBox.png */; };
 /* End PBXBuildFile section */
@@ -200,6 +208,14 @@
 		B51C59241EE46B7400986919 /* whatsYourDamage.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whatsYourDamage.mp3; sourceTree = "<group>"; };
 		B51C59251EE46B7400986919 /* whoWouldWant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = whoWouldWant.mp3; sourceTree = "<group>"; };
 		B51C59261EE46B7400986919 /* youllRegret.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = youllRegret.mp3; sourceTree = "<group>"; };
+		B51C594A1EE46BEA00986919 /* bgMusic2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bgMusic2.wav; sourceTree = "<group>"; };
+		B51C594C1F045E9700986919 /* spaceShip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spaceShip.png; sourceTree = "<group>"; };
+		B51C59501F049B3C00986919 /* char.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = char.png; sourceTree = "<group>"; };
+		B51C59521F04A21F00986919 /* alienShip2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alienShip2.png; sourceTree = "<group>"; };
+		B57D85921F0C755200C7C9E0 /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		B57D85941F0C78CE00C7C9E0 /* vehicle1Left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vehicle1Left.png; sourceTree = "<group>"; };
+		B57D85951F0C78CE00C7C9E0 /* vehicle1Right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vehicle1Right.png; sourceTree = "<group>"; };
+		B57D85981F0C7EDC00C7C9E0 /* AbducteeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AbducteeType.swift; sourceTree = "<group>"; };
 		B588B7AF1ECBEE9300831F23 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		B588B7B11ECBEFC300831F23 /* boomBox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = boomBox.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -267,6 +283,7 @@
 			children = (
 				B517A2EE1EC5509200EDF73A /* AppDelegate.swift */,
 				B514D1741EC8F4A600E0845F /* ABCompleteParticleEmitter.sks */,
+				B57D85981F0C7EDC00C7C9E0 /* AbducteeType.swift */,
 				B517A32D1EC6621700EDF73A /* CollisionBitMasks.swift */,
 				B514D1721EC8F23F00E0845F /* Colors.swift */,
 				B517A3141EC5541E00EDF73A /* DegToRads.swift */,
@@ -305,15 +322,18 @@
 				B51C58CE1ED09BEF00986919 /* alien1.png */,
 				B51C58CD1ED09BEF00986919 /* alien2.png */,
 				B517A31F1EC55A5000EDF73A /* alienShip.png */,
+				B51C59521F04A21F00986919 /* alienShip2.png */,
 				B51C58F11EDB4F4A00986919 /* alienShipTop.png */,
 				B51C58F21EDB4F4A00986919 /* alienShipBottom.png */,
 				B51C58F31EDB4F4A00986919 /* alienShipBody2.png */,
 				B51C58F41EDB4F4A00986919 /* alienShipBody1.png */,
+				B57D85921F0C755200C7C9E0 /* bg.png */,
 				B588B7B11ECBEFC300831F23 /* boomBox.png */,
 				B51C58EF1EDB293F00986919 /* boomBox2.png */,
 				B51C58FB1EDB653700986919 /* cityBG.png */,
 				B51C58FD1EDCB86A00986919 /* carLeft.png */,
 				B51C58FE1EDCB86A00986919 /* carRight.png */,
+				B51C59501F049B3C00986919 /* char.png */,
 				B51C58D71ED0A2AD00986919 /* dialogBoxLeft.png */,
 				B51C58D81ED0A2AD00986919 /* dialogBoxRight.png */,
 				B51C58E71EDB25CB00986919 /* earth2.png */,
@@ -327,7 +347,10 @@
 				B514D17C1EC9106000E0845F /* man4.png */,
 				B51C58D31ED0A0C400986919 /* moon.png */,
 				B51C58D11ED09CDE00986919 /* playButton.png */,
+				B51C594C1F045E9700986919 /* spaceShip.png */,
 				B51C58C71ED0980700986919 /* starsBG.png */,
+				B57D85941F0C78CE00C7C9E0 /* vehicle1Left.png */,
+				B57D85951F0C78CE00C7C9E0 /* vehicle1Right.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -340,6 +363,7 @@
 				B51C59061EE46B7400986919 /* anyDayNow.mp3 */,
 				B51C59071EE46B7400986919 /* beamSound.mp3 */,
 				B51C59081EE46B7400986919 /* beef.mp3 */,
+				B51C594A1EE46BEA00986919 /* bgMusic2.wav */,
 				B51C59091EE46B7400986919 /* claimed.mp3 */,
 				B51C590A1EE46B7400986919 /* cuntach.mp3 */,
 				B51C590B1EE46B7400986919 /* dontMind.mp3 */,
@@ -465,6 +489,7 @@
 				B51C593E1EE46B7400986919 /* radSauce.mp3 in Resources */,
 				B51C59421EE46B7400986919 /* soAnyways.mp3 in Resources */,
 				B51C59391EE46B7400986919 /* needMoreInput.mp3 in Resources */,
+				B57D85971F0C78CE00C7C9E0 /* vehicle1Right.png in Resources */,
 				B51C58D01ED09BEF00986919 /* alien1.png in Resources */,
 				B51C59411EE46B7400986919 /* score.mp3 in Resources */,
 				B51C58D41ED0A0C400986919 /* moon.png in Resources */,
@@ -479,6 +504,7 @@
 				B51C58F61EDB4F4A00986919 /* alienShipBottom.png in Resources */,
 				B51C58E81EDB25CB00986919 /* earth2.png in Resources */,
 				B51C58D91ED0A2AD00986919 /* dialogBoxLeft.png in Resources */,
+				B57D85961F0C78CE00C7C9E0 /* vehicle1Left.png in Resources */,
 				B51C58FC1EDB653700986919 /* cityBG.png in Resources */,
 				B51C58E21EDB1F3800986919 /* vanchrome.ttf in Resources */,
 				B51C593C1EE46B7400986919 /* part0.mp3 in Resources */,
@@ -498,13 +524,16 @@
 				B51C58F71EDB4F4A00986919 /* alienShipBody2.png in Resources */,
 				B51C592A1EE46B7400986919 /* beamSound.mp3 in Resources */,
 				B51C59461EE46B7400986919 /* waitingOnYou.mp3 in Resources */,
+				B51C59531F04A21F00986919 /* alienShip2.png in Resources */,
 				B51C59321EE46B7400986919 /* imBusy1.mp3 in Resources */,
 				B51C58D21ED09CDE00986919 /* playButton.png in Resources */,
 				B517A3261EC5603200EDF73A /* man1.png in Resources */,
 				B51C59481EE46B7400986919 /* whoWouldWant.mp3 in Resources */,
 				B51C58EC1EDB277700986919 /* earth4.png in Resources */,
 				B51C58C81ED0980700986919 /* starsBG.png in Resources */,
+				B51C59511F049B3C00986919 /* char.png in Resources */,
 				B51C58F01EDB293F00986919 /* boomBox2.png in Resources */,
+				B51C594B1EE46BEA00986919 /* bgMusic2.wav in Resources */,
 				B51C58E41EDB209B00986919 /* xylitol.ttf in Resources */,
 				B51C59381EE46B7400986919 /* mikeyLikes.mp3 in Resources */,
 				B51C59301EE46B7400986919 /* gameOn.mp3 in Resources */,
@@ -515,11 +544,13 @@
 				B51C593F1EE46B7400986919 /* reallyAgain.mp3 in Resources */,
 				B51C59001EDCB86A00986919 /* carRight.png in Resources */,
 				B51C592E1EE46B7400986919 /* dontMind.mp3 in Resources */,
+				B51C594D1F045E9700986919 /* spaceShip.png in Resources */,
 				B51C58E01ED0D10F00986919 /* earth.png in Resources */,
 				B51C58F51EDB4F4A00986919 /* alienShipTop.png in Resources */,
 				B517A2FF1EC5509200EDF73A /* LaunchScreen.storyboard in Resources */,
 				B51C58EE1EDB285900986919 /* earth5.png in Resources */,
 				B51C59371EE46B7400986919 /* likeSand.mp3 in Resources */,
+				B57D85931F0C755200C7C9E0 /* bg.png in Resources */,
 				B514D1751EC8F4A600E0845F /* ABCompleteParticleEmitter.sks in Resources */,
 				B51C59291EE46B7400986919 /* anyDayNow.mp3 in Resources */,
 				B51C592C1EE46B7400986919 /* claimed.mp3 in Resources */,
@@ -536,6 +567,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57D85991F0C7EDC00C7C9E0 /* AbducteeType.swift in Sources */,
 				B51C58DC1ED0AA1800986919 /* TextFormatter.swift in Sources */,
 				B517A2F51EC5509200EDF73A /* GameScene.swift in Sources */,
 				B514D1731EC8F23F00E0845F /* Colors.swift in Sources */,

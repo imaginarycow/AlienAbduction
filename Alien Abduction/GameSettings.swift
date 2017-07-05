@@ -9,7 +9,7 @@
 import SpriteKit
 
 //let globalFont = "AmericanTypewriter-Bold"
-//let globalFont = "VanchromeClear-Regular"
+let inGameFont = "VanchromeClear-Regular"
 
 let globalFont = "XylitolHollow-Regular"
 //let globalFont = "KraitSolid-Regular"

@@ -9,12 +9,12 @@
 import SpriteKit
 
 //texture, color, size, points, mass
-let ab1: [Any] = ["man1.png", UIColor.white, char1Size, 5, 1]
-let ab2: [Any] = ["man2.png", UIColor.white, char1Size, 10, 2]
-let ab3: [Any] = ["man3.png", UIColor.white, char1Size, 15, 3]
-let ab4: [Any] = ["man4.png", UIColor.white, char1Size, 20, 4]
-let ab5: [Any] = ["man3.png", UIColor.white, char1Size, 25, 5]
-let ab6: [Any] = ["man2.png", UIColor.white, char1Size, 30, 6]
+let ab1: [Any] = ["char.png", UIColor.white, char1Size, 5, 1]
+let ab2: [Any] = ["char.png", UIColor.white, char1Size, 10, 2]
+let ab3: [Any] = ["char.png", UIColor.white, char1Size, 15, 3]
+let ab4: [Any] = ["char.png", UIColor.white, char1Size, 20, 4]
+let ab5: [Any] = ["char.png", UIColor.white, char1Size, 25, 5]
+let ab6: [Any] = ["char.png", UIColor.white, char1Size, 30, 6]
 
 let possibleAbductees = [ab1,ab2,ab3,ab4,ab5,ab6]
 

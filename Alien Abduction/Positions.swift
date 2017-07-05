@@ -22,5 +22,7 @@ var centerScreen = CGPoint(x: centerX, y: centerY)
 let homeButtonPosition = CGPoint(x: deviceWidth * 0.1, y: deviceHeight * 0.9)
 
 let characterStartingY = deviceHeight * 0.15
+let vehicleStartingY = deviceHeight * 0.10
 
 let shipPosition = CGPoint(x: centerX, y: deviceHeight * 0.85)
+let shipPosition2 = CGPoint(x: centerX, y: deviceHeight * 0.825)

@@ -8,14 +8,14 @@
 
 import SpriteKit
 
-let shipSize = CGSize(width: 400, height: 200)
+let shipSize = CGSize(width: 174, height: 123)
 
 class AlienShip: SKSpriteNode {
     
     var lights:[SKShapeNode] = []
     
     init() {
-        super.init(texture: SKTexture(imageNamed: "alienShipBody2.png"), color: .white, size: shipSize)
+        super.init(texture: SKTexture(imageNamed: "alienShip2.png"), color: .white, size: shipSize)
         
         self.texture = texture
         self.color = color
@@ -23,22 +23,22 @@ class AlienShip: SKSpriteNode {
         self.name = "AlienShip"
         self.zPosition = shipZPosition + 1
         
-        let shipBody2 = (SKSpriteNode(imageNamed: "alienShipBody1.png"))
-        shipBody2.zPosition = shipZPosition
-        shipBody2.size = shipSize
-        self.addChild(shipBody2)
+        //let shipBody2 = (SKSpriteNode(imageNamed: "alienShipBody1.png"))
+        //shipBody2.zPosition = shipZPosition
+        //shipBody2.size = shipSize
+        //self.addChild(shipBody2)
         
-        let shipTop = SKSpriteNode(imageNamed: "alienShipTop.png")
-        shipTop.size = shipSize
-        self.addChild(shipTop)
+        //let shipTop = SKSpriteNode(imageNamed: "alienShipTop.png")
+        //shipTop.size = shipSize
+        //self.addChild(shipTop)
         
-        let shipBottom = SKSpriteNode(imageNamed: "alienShipBottom.png")
-        shipBottom.size = shipSize
-        self.addChild(shipBottom)
+        //let shipBottom = SKSpriteNode(imageNamed: "alienShipBottom.png")
+        //shipBottom.size = shipSize
+        //self.addChild(shipBottom)
         
-        addLights()
+        //addLights()
         
-        self.physicsBody = SKPhysicsBody(texture: shipBottom.texture!, size: shipBottom.size)
+        self.physicsBody = SKPhysicsBody(texture: self.texture!, size: self.size)
         self.physicsBody?.affectedByGravity = false
         self.physicsBody?.isDynamic = false
         self.physicsBody?.categoryBitMask = shipCategory

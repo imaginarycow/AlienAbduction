@@ -29,7 +29,7 @@ class PowerMeter: SKNode {
         
         percentLabel = SKLabelNode(text: "\(self.powerLevel)%")
         percentLabel.position = CGPoint(x: outerShell.position.x, y: outerShell.position.y  - meterHeight * 2)
-        percentLabel.fontName = globalFont
+        //percentLabel.fontName = inGameFont
         percentLabel.fontSize = 20.0
         percentLabel.fontColor = .red
         addChild(percentLabel)

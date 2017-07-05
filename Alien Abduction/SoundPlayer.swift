@@ -35,10 +35,29 @@ func playBGMusic() {
         print(error.localizedDescription)
     }
 }
-
-func playLaugh() {
-    let randomNum = getRandomNumber(max: 10)
-    let url = randomNum % 2 == 0 ? Bundle.main.url(forResource: "laugh", withExtension: "mp3")! : Bundle.main.url(forResource: "sucker", withExtension: "mp3")!
+func playLowBattery() {
+    let taunts = ["needMoreInput","runningOutOfJuice"]
+    let randomNum = getRandomNumber(max: taunts.count - 1)
+    let url = Bundle.main.url(forResource: taunts[randomNum], withExtension: "mp3")!
+    
+    
+    do {
+        print("launching new avaudio player")
+        soundClipPlayer = try AVAudioPlayer(contentsOf: url)
+        guard let player = soundClipPlayer else { return }
+        
+        player.prepareToPlay()
+        player.play()
+        player.numberOfLoops = 0
+        //playerPlaying = true
+    } catch let error {
+        print(error.localizedDescription)
+    }
+}
+func playTaunt() {
+    let taunts = ["laugh","youllRegret","sucker","whatsYourDamage"]
+    let randomNum = getRandomNumber(max: taunts.count - 1)
+    let url = Bundle.main.url(forResource: taunts[randomNum], withExtension: "mp3")!
 
     
     do {
@@ -55,8 +74,9 @@ func playLaugh() {
     }
 }
 func playScoreSound() {
-    let randomNum = getRandomNumber(max: 10)
-    let url = randomNum % 2 == 0 ? Bundle.main.url(forResource: "score", withExtension: "mp3")! : Bundle.main.url(forResource: "dontMind", withExtension: "mp3")!
+    let sounds = ["score","dontMind","claimed","likeSand","radical","needThis","radSauce"]
+    let randomNum = getRandomNumber(max: sounds.count - 1)
+    let url = Bundle.main.url(forResource: sounds[randomNum], withExtension: "mp3")!
     
     do {
         print("launching new avaudio player")

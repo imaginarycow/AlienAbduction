@@ -18,7 +18,7 @@ class TractorBeam: SKShapeNode{
         
         self.lineWidth = 1
         self.strokeColor = .yellow
-        self.fillColor = .yellow
+        self.fillColor = getRandomColor()
         self.zPosition = beamZPosition
         self.alpha = 0.5
         self.name = name

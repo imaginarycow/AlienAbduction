@@ -13,6 +13,7 @@ let bgZPosition:CGFloat = 1
 
 let alienZPosition:CGFloat = 3
 let abducteeZPosition:CGFloat = 5
+let vehicleZPosition:CGFloat = abducteeZPosition + 1
 let buttonZPosition:CGFloat = bgZPosition + 1
 let itemZPosition:CGFloat = 4
 let beamZPosition:CGFloat = abducteeZPosition + 1
